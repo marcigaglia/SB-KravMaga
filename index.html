@@ -658,7 +658,7 @@ function renderSections(belt) {
     html += `<div class="tip-block"><div class="tip-label">⚡ Principi chiave</div>${belt.tips.map(t=>`<div class="tip-text">• ${t}</div>`).join('')}</div>`;
   }
   belt.sections.forEach((sec,si)=>{
-    const vidCount = sec.items.filter(i=>i.video).length;
+    const vidCount = sec.items.filter(i=>videoReady(i.video)).length;
     html += `
       <div class="section-item" id="sec-${si}">
         <div class="section-header" onclick="toggleSection(${si})">
@@ -674,7 +674,7 @@ function renderSections(belt) {
                 ${item.n ? `<div class="tech-name">${item.n}. ${item.name}</div>` : `<div class="tech-name">${item.name}</div>`}
                 <div class="tech-desc">${item.desc.length>110 ? item.desc.substring(0,110)+'…' : item.desc}</div>
               </div>
-              ${item.video ? '<div class="video-badge">▶ VIDEO</div>' : ''}
+              ${videoReady(item.video) ? '<div class="video-badge">▶ VIDEO</div>' : ''}
             </div>
           `).join('')}
         </div>
@@ -706,7 +706,7 @@ function openTech(beltId, si, ii) {
 
   // Video block
   let videoHtml = '';
-  if (tech.video) {
+  if (videoReady(tech.video)) {
     videoHtml = `
       <div class="video-section">
         <div class="video-wrapper">
@@ -741,7 +741,7 @@ function openTech(beltId, si, ii) {
               <div style="font-size:14px;font-weight:600">${t.n ? t.n+'. ' : ''}${t.name}</div>
               <div style="font-size:12px;color:var(--text2);margin-top:2px">${t.desc.substring(0,70)}…</div>
             </div>
-            ${t.video ? '<div class="video-badge">▶</div>' : ''}
+            ${videoReady(t.video) ? '<div class="video-badge">▶</div>' : ''}
           </div>
         `).join('')}
       ` : ''}
@@ -822,7 +822,7 @@ function onSearch(query) {
       <div class="sr-section">${r.sec.title}</div>
       <div class="sr-tech">${r.item.n ? r.item.n+'. ' : ''}${r.item.name}</div>
       <div class="sr-snippet">${highlight(r.item.desc,q)}</div>
-      ${r.item.video ? '<div class="sr-has-video">▶ Video disponibile</div>' : ''}
+      ${videoReady(r.item.video) ? '<div class="sr-has-video">▶ Video disponibile</div>' : ''}
     </div>`;
   });
   html+='</div>';
@@ -837,7 +837,32 @@ function openTechFromSearch(beltId,si,ii) {
   openTech(beltId,si,ii);
 }
 
-renderHome();
+// --- VIDEO MANIFEST ---
+let availableVideos = new Set();
+
+function videoReady(filename) {
+  if (!filename) return false;
+  return availableVideos.has(filename);
+}
+
+async function loadVideoManifest() {
+  try {
+    const res = await fetch('./video/index.json');
+    if (res.ok) {
+      const list = await res.json();
+      availableVideos = new Set(list);
+    }
+  } catch(e) {
+    // No manifest yet, all badges hidden
+  }
+}
+
+async function init() {
+  await loadVideoManifest();
+  renderHome();
+}
+
+init();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js');
 </script>
 </body>
