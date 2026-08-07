@@ -670,13 +670,13 @@ function renderSections(belt) {
     html += `<div class="tip-block"><div class="tip-label">⚡ Principi chiave</div>${belt.tips.map(t=>`<div class="tip-text">• ${t}</div>`).join('')}</div>`;
   }
   belt.sections.forEach((sec,si)=>{
-    const vidCount = 0;
+    const vidCount = sec.items.filter(i=>videoReady(i.video)).length;
     html += `
       <div class="section-item" id="sec-${si}">
         <div class="section-header" onclick="toggleSection(${si})">
           <div class="section-num">${String(si+1).padStart(2,'0')}</div>
           <div class="section-title">${sec.title}</div>
-          
+          ${vidCount>0 ? `<div style="font-size:11px;color:var(--accent);margin-right:4px">▶ ${vidCount}</div>` : ''}
           <div class="section-chevron">›</div>
         </div>
         <div class="section-body">
@@ -686,6 +686,7 @@ function renderSections(belt) {
                 ${item.n ? `<div class="tech-name">${item.n}. ${item.name}</div>` : `<div class="tech-name">${item.name}</div>`}
                 <div class="tech-desc">${item.desc.length>110 ? item.desc.substring(0,110)+'…' : item.desc}</div>
               </div>
+              ${videoReady(item.video) ? '<div class="video-badge">▶ VIDEO</div>' : ''}
               
             </div>
           `).join('')}
@@ -753,7 +754,7 @@ function openTech(beltId, si, ii) {
               <div style="font-size:14px;font-weight:600">${t.n ? t.n+'. ' : ''}${t.name}</div>
               <div style="font-size:12px;color:var(--text2);margin-top:2px">${t.desc.substring(0,70)}…</div>
             </div>
-            
+            ${videoReady(t.video) ? '<div class="video-badge">▶</div>' : ''}
           </div>
         `).join('')}
       ` : ''}
@@ -835,6 +836,7 @@ function onSearch(query) {
       <div class="sr-tech">${r.item.n ? r.item.n+'. ' : ''}${r.item.name}</div>
       <div class="sr-snippet">${highlight(r.item.desc,q)}</div>
       
+    ${videoReady(r.item.video) ? '<div class="sr-has-video">▶ Video disponibile</div>' : ''}
     </div>`;
   });
   html+='</div>';
