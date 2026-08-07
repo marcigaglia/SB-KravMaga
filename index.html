@@ -198,10 +198,11 @@ const BELTS = [
         { n:'2', name:'Laterale', video:'gialla_9_2.mp4', desc:'Come sopra ma avversario laterale, la coscia rimane parallela al terreno.' }
       ]},
       { title:'Calci', items:[
-        { n:'1', name:'Calcio frontale - varie altezze', video:'gialla_10_1.mp4', desc:'A) Posizione naturale: calcio frontale sx e dx. B) In guardia. Gamba avanti = più veloce, meno potente. Gamba dietro = più potente, meno veloce.' },
-        { n:'2', name:'Calcio laterale - varie altezze', video:'gialla_10_2.mp4', desc:'Colpisci col bordo del piede o col piatto, apri, carica e colpisci. Da posizione naturale e in guardia.' },
+        { n:'1', name:'Calcio frontale — varie altezze', video:'gialla_10_1.mp4', desc:'Più vado indietro con la schiena più il calcio è veloce. A) Posizione naturale: calcio frontale sx e dx. B) In guardia: posso colpire sia con gamba avanti (più veloce, meno potente) che con gamba dietro (meno veloce, più potente).' },
+        { n:'2', name:'Calcio laterale — varie altezze', video:'gialla_10_2.mp4', desc:'Parto da posizione naturale difensiva. Colpisco col bordo del piede o col piatto, apro carico e colpisco. A) Posizione naturale sx e dx: colpisco con la pianta o con il tallone. B) In guardia: calcio laterale sx e dx, colpisco con la pianta o con il tallone.' },
         { n:'3', name:'Calcio circolare (gamba dietro)', video:'gialla_10_3.mp4', desc:'Potenza dalla rotazione del piede a terra (almeno 90°). Colpisci sempre con la tibia. La gamba deve essere distesa.' },
-        { n:'4', name:'Calcio all\'indietro', video:'gialla_10_4.mp4', desc:'Se avversario lontano: calcio laterale distante. Se vicino: calcio del mulo. In guardia: rotazione oraria e calcio all\'indietro.' }
+        { n:'4', name:'Calcio all\'indietro', video:'gialla_10_4.mp4', desc:'A) Posizione naturale: calcio all\'indietro sx e dx. B) In guardia sx: rotazione oraria e calcio all\'indietro.' },
+        { n:'5', name:'Calcio frontale con rotazione', video:'gialla_10_5.mp4', desc:'Avversario di fronte a me: calcio girato — rotazione oraria e calcio all\'indietro.' }
       ]},
       { title:'Difese da pugno diretto', items:[
         { n:'1', name:'Spostamento laterale con uscita', video:'gialla_11_1.mp4', desc:'Spostamento laterale con uscita dal lato in cui arriva il colpo per rimanere esterno e contrattaccare. Pugno diretto all\'addome abbassandosi.' },
@@ -212,16 +213,15 @@ const BELTS = [
         { n:'', name:'7 Parate fondamentali', video:'gialla_12_1.mp4', desc:'Parate a 180° (dalla 1 alla 7) con mano sx e dx. Non esiste parata senza colpo. Avanza con lo stesso piede della parata, la parata è anche un colpo, pugno al viso con l\'altra mano.' }
       ]},
       { title:'Difese da strangolamento', items:[
-        { n:'1A', name:'Frontale statica - ginocchiata', video:'gialla_13_1.mp4', desc:'Afferra con le mani a pappagallo i polsi, ginocchiata ai testicoli inclinando indietro la schiena.' },
-        { n:'1B', name:'Frontale statica - colpo al viso', video:'gialla_13_2.mp4', desc:'Passo indietro afferrando la mano dallo stesso lato con cui indietreggi, sfila la spalla passando sotto e colpo di palmo al viso o mano a pappagallo in fossetta sovrasternale.' },
-        { n:'1C', name:'Frontale statica - colpo alle orecchie', video:'gialla_13_3.mp4', desc:'Sputo e colpisci simultaneamente entrambe le orecchie con mano aperta.' },
+        { n:'1-A', name:'Frontale statica — ginocchiata', video:'gialla_13_1.mp4', desc:'Afferro con le mani a pappagallo i polsi, ginocchiata ai testicoli inclinando indietro la schiena.' },
+        { n:'1-B', name:'Frontale statica — colpo al viso', video:'gialla_13_2.mp4', desc:'Passo indietro afferrando la mano dallo stesso lato con cui indietreggio, sfilo la spalla passando sotto e colpo di palmo al viso o mano a pappagallo in fossetta sovrasternale.' },
+        { n:'1-C', name:'Frontale statica — colpo alle orecchie', video:'gialla_13_3.mp4', desc:'Sputo e colpisco simultaneamente entrambe le orecchie con mano aperta.' },
         { n:'2', name:'Da dietro a due mani dinamico', video:'gialla_13_4.mp4', desc:'Afferra le mani dell\'aggressore, passa all\'indietro cercando il contatto con il gluteo su sua gamba esterna, colpisci i genitali, gomitata n.7 al viso, passo in avanti con gamba esterna, calcio all\'indietro poi passo avanti.' },
         { n:'3', name:'Di lato statica', video:'gialla_13_5.mp4', desc:'Con mano più distante afferra la presa per respirare. Mano più vicina colpisci i genitali, gomitata al mento con stesso lato, passo per allontanarti, calcio ai genitali.' }
       ]},
       { title:'Esame', items:[
-        { n:'', name:'Shadow boxing - 2 minuti', video:'', desc:'Combinare i colpi in sequenza, lo stesso colpo non si ripete più di una volta.' },
-        { n:'', name:'Combattimento a contatto leggero', video:'', desc:'1 round da 2 minuti.' },
-        { n:'', name:'Programma esame', video:'', desc:'Tutte le sezioni del programma cintura gialla: cadute, posizioni, pugni, spostamenti, colpi vari, gomitate, pugni a martello, ginocchiate, calci, difese da pugno diretto, 7 parate, difese da strangolamento.' }
+        { n:'15', name:'Shadow boxing completa — 2 minuti', video:'', desc:'Combinare i colpi in sequenza, in maniera che lo stesso colpo non sia ripetuto più di una volta.' },
+        { n:'16', name:'Combattimento a contatto leggero — 1 round da 2 minuti', video:'', desc:'1 round da 2 minuti a contatto leggero.' }
       ]}
     ],
     tips:['Non esiste parata senza colpo','Combina i colpi in sequenza: lo stesso colpo non si ripete due volte di fila']
@@ -230,67 +230,76 @@ const BELTS = [
     id:'arancio', name:'Cintura Arancione', color:'#e8720a',
     sections:[
       { title:'Cadute', items:[
-        { n:'1', name:'Caduta in avanti dura', video:'arancio_1_1.mp4', desc:'Reazione a potenziale esplosione. Buttati per terra atterrando con gli avambracci. Ruota la testa lateralmente. Corpo rigido, posizione di plank.' },
-        { n:'2', name:'Caduta laterale con ostacolo', video:'arancio_1_2.mp4', desc:'Caduta laterale con ostacolo presente.' },
-        { n:'3', name:'Caduta indietro ruotando', video:'arancio_1_3.mp4', desc:'Rotazione con ammortizzamento sulle braccia.' }
+        { n:'1', name:'Caduta laterale sx e dx', video:'arancio_1_1.mp4', desc:'Caduta = manca fase di rivoluzione; è come calciare lateralmente un pallone, la gamba che ha calciato poi rimane sollevata per aumentare carico sulla spalla. Propedeutica alla waki gatame.' },
+        { n:'2', name:'Caduta indietro con lo sparring in ginocchio dietro le gambe', video:'arancio_1_2.mp4', desc:'Mi appoggio più possibile e scendo con il sedere portandolo più vicino possibile al terreno, ammortizzo la caduta aprendo le braccia, testa in avanti, mani in guardia e recupero.' },
+        { n:'3', name:'Caduta in avanti morbida su mani', video:'arancio_1_3.mp4', desc:'Ruotare testa per non sbattere il naso, l\'ombelico scende perpendicolarmente (busto avanti, gambe indietro).' }
       ]},
       { title:'Ganci', items:[
-        { n:'1', name:'Gancio sx e dx - posizione naturale', video:'arancio_2_1.mp4', desc:'È la distanza che fa il colpo. Da posizione chiusa, il gomito si alza, avambraccio parallelo al terreno, usa il caricamento dell\'anca, pugno a 45° o verticale.' },
-        { n:'2', name:'Gancio al busto', video:'arancio_2_2.mp4', desc:'Come il gancio 1 ma al busto.' },
-        { n:'3', name:'Gancio sx e dx - in guardia', video:'arancio_2_3.mp4', desc:'Colpisci col braccio più vicino al corpo, pari alla gamba avanti.' },
-        { n:'4', name:'Gancio al busto - in guardia', video:'arancio_2_4.mp4', desc:'Doppiando e alternando gancio al viso e al corpo. Colpisci col braccio più vicino, pari alla gamba avanti.' },
-        { n:'5', name:'Gancio Luca (overhand)', video:'arancio_2_5.mp4', desc:'Da posizione naturale o di guardia, dx e sx.' }
+        { n:'1', name:'Posizione naturale: gancio sx e dx', video:'arancio_2_1.mp4', desc:'È la distanza che fa il colpo. Da posizione chiusa, il gomito si alza, avambraccio parallelo al terreno, usa il caricamento dell\'anca, pugno a 45° o verticale.' },
+        { n:'2', name:'Posizione naturale: gancio al busto', video:'arancio_2_2.mp4', desc:'Colpisco come gancio 1 ma al busto.' },
+        { n:'3', name:'In guardia: gancio sx e dx', video:'arancio_2_3.mp4', desc:'Colpisci col braccio più vicino al corpo, pari alla gamba avanti.' },
+        { n:'4', name:'In guardia: gancio al busto', video:'arancio_2_4.mp4', desc:'Insegnare a doppiando e alternando gancio al viso e al corpo. Colpisco col braccio più vicino, pari alla gamba avanti.' },
+        { n:'5', name:'Gancio Luca (aka overhand)', video:'arancio_2_5.mp4', desc:'Da posizione naturale o di guardia, dx e sx.' }
       ]},
       { title:'Montanti', items:[
-        { n:'1', name:'Montante al viso dx e sx', video:'arancio_3_1.mp4', desc:'Unico colpo che va dal basso verso l\'alto. Distanza ravvicinata, avambraccio parallelo allo sterno, spinta dall\'anca. Il gomito rimane appoggiato all\'anca.' },
-        { n:'2', name:'Montante alla bocca dello stomaco', video:'arancio_3_2.mp4', desc:'Come il montante al viso ma diretto alla bocca dello stomaco.' }
+        { n:'1', name:'Montante al viso dx e sx', video:'arancio_3_1.mp4', desc:'Unico colpo che va dal basso verso l\'alto. Distanza ravvicinata, avambraccio parallelo allo sterno, la spinta parte dall\'anca. Il gomito rimane appoggiato all\'anca. Da posizione naturale e guardia.' },
+        { n:'2', name:'Montante alla bocca dello stomaco dx e sx', video:'arancio_3_2.mp4', desc:'Come il montante al viso ma diretto alla bocca dello stomaco. Da posizione naturale e guardia.' }
       ]},
       { title:'Testate', items:[
-        { n:'1', name:'Testata frontale', video:'arancio_4_1.mp4', desc:'Mira il naso. Colpo ravvicinato, porta il mento il più velocemente possibile vicino allo sterno, meno ti muovi nel caricamento meglio è. Si colpisce con l\'osso temporale.' },
-        { n:'2', name:'Testata laterale', video:'arancio_4_2.mp4', desc:'Colpisci con l\'osso temporale laterale "corno". Colpisci tempia e/o zigomo.' }
+        { n:'1', name:'Testata frontale', video:'arancio_4_1.mp4', desc:'Miro il naso, colpo ravvicinato, devo portare il mio mento più velocemente possibile vicino allo sterno, meno ci si muove nel caricamento meglio è. Si colpisce con osso temporale.' },
+        { n:'2', name:'Testata laterale', video:'arancio_4_2.mp4', desc:'Colpisco con l\'osso temporale (linea temporale laterale) "corno". Colpisco tempia e/o zigomo.' }
       ]},
       { title:'Calci', items:[
-        { n:'1', name:'Piede scaccia piede - frontale', video:'arancio_5_1.mp4', desc:'Il piede sx prende il posto del dx e calcio frontale.' },
-        { n:'2', name:'Piede scaccia piede - laterale', video:'arancio_5_2.mp4', desc:'Il piede sx prende il posto del dx e calcio laterale, parti frontale e gira.' },
-        { n:'3', name:'Piede scaccia piede - circolare', video:'arancio_5_3.mp4', desc:'Il piede sx prende il posto del dx e calcio circolare.' },
-        { n:'4', name:'Calcio sfonda porta', video:'arancio_5_4.mp4', desc:'Appoggia il piede al petto dell\'avversario, ideale se è seduto. Uso per aumentare distanza in combattimento.' },
-        { n:'5', name:'Mikazuki geri', video:'arancio_5_5.mp4', desc:'Colpisci con interno o esterno del piede. Sia con gamba avanti che dietro. Funzione: aprire la guardia.' },
+        { n:'1', name:'Da posizione naturale frontale: piede scaccia piede — dx e sx', video:'arancio_5_1.mp4', desc:'Il piede sx prende il posto del dx e calcio frontale.' },
+        { n:'2', name:'Da posizione naturale laterale: piede scaccia piede — dx e sx laterale', video:'arancio_5_2.mp4', desc:'Il piede sx prende il posto del dx e calcio laterale, parto frontale e giro.' },
+        { n:'3', name:'Da posizione naturale circolare: piede scaccia piede — dx e sx circolare', video:'arancio_5_3.mp4', desc:'Il piede sx prende il posto del dx e calcio circolare.' },
+        { n:'4', name:'Calcio sfonda porta — dx e sx', video:'arancio_5_4.mp4', desc:'Appoggiando piede al petto dell\'avversario, ideale se avversario è seduto; sia con gamba davanti che dietro. Lo utilizzo quando aggressore è seduto oppure in combattimento per aumentare la distanza.' },
+        { n:'5', name:'Calcio circolare con interno o esterno piede — dx e sx mikazuki geri', video:'arancio_5_5.mp4', desc:'Colpire con interno o esterno del piede, si può fare sia con gamba davanti che gamba dietro. Funzione: aprire la guardia.' },
         { n:'6', name:'Calcio ad ascia', video:'arancio_5_6.mp4', desc:'Solleva la gamba e scendi perpendicolare al terreno per colpire con il tallone viso o spalla.' },
         { n:'7', name:'Uramawashi dx e sx', video:'arancio_5_7.mp4', desc:'Colpire gamba dietro con tallone.' }
       ]},
       { title:'Parate in seconda guardia', items:[
-        { n:'1-7', name:'7 parate in seconda guardia', video:'arancio_6_1.mp4', desc:'Parata 1: palmo verso di noi. Parata 2: palmo di lato. Parata 3: palmo verso avversario. Parata 4: braccio teso imbuto alto interno. Parata 5: palmo verso l\'esterno. Parata 6: gomito chiuso verso l\'orecchio. Parata 7: braccio sopra la testa piegato a 90°.' }
+        { n:'1', name:'Palmo verso di noi', video:'arancio_6_1.mp4', desc:'Da seconda guardia, pugno con mano dx e porto sx in parata (applicazione su bastone). La spalla attiva deve andare a protezione del mento.' },
+        { n:'2', name:'Palmo di lato', video:'arancio_6_2.mp4', desc:'Da seconda guardia, pugno con mano dx e porto sx in parata.' },
+        { n:'3', name:'Palmo verso avversario', video:'arancio_6_3.mp4', desc:'Da seconda guardia, pugno con mano dx e porto sx in parata.' },
+        { n:'4', name:'Braccio teso imbuto alto interno', video:'arancio_6_4.mp4', desc:'Da seconda guardia, pugno con mano dx e porto sx in parata.' },
+        { n:'5', name:'Braccio leggermente piegato, palmo è rivolto verso l\'esterno', video:'arancio_6_5.mp4', desc:'Da seconda guardia, pugno con mano dx e porto sx in parata.' },
+        { n:'6', name:'Gomito chiuso verso l\'orecchio', video:'arancio_6_6.mp4', desc:'Accarezzarsi l\'orecchio. Da seconda guardia, pugno con mano dx e porto sx in parata (applicazione su bastone). La spalla attiva deve andare a protezione del mento.' },
+        { n:'7', name:'Braccio sopra la nostra testa piegato a 90°', video:'arancio_6_7.mp4', desc:'Difesa abbassandosi da calcio circolare alto, mano dx su inguine, la sx afferra la coscia e spinge (faccio passo avanti con gamba). La spalla attiva deve andare a protezione del mento.' }
       ]},
       { title:'Difesa da calcio basso-medio frontale', items:[
-        { n:'1', name:'Deviazione con la gamba avanti', video:'arancio_7_1.mp4', desc:'In guardia: devia internamente o esternamente sempre con la gamba davanti.' },
-        { n:'2', name:'Stop kick', video:'arancio_7_2.mp4', desc:'Anticipa il calcio dell\'avversario con calcio laterale basso con l\'arco plantare rivolto verso l\'alto (gamba dietro) al collo del piede che sta tirando.' },
-        { n:'3', name:'Braccio ad imbuto', video:'arancio_7_3.mp4', desc:'Il braccio dietro va a protezione dell\'inguine sia interno che esterno al calcio, esci esternamente al calcio, colpisci col pugno.' },
-        { n:'4', name:'Schiaffetto', video:'arancio_7_4.mp4', desc:'No spostamento dei piedi ma rotazione dell\'anca, parata sempre esterna al calcio, esci esternamente facendo passo avanti con gamba omolaterale.' }
+        { n:'1', name:'In guardia: deviazione con la gamba avanti', video:'arancio_7_1.mp4', desc:'Devio internamente o esternamente sempre con gamba davanti.' },
+        { n:'2', name:'Stop kick', video:'arancio_7_2.mp4', desc:'Anticipo il calcio dell\'avversario con calcio laterale basso con l\'arco plantare rivolto verso l\'alto (gamba dietro) al collo del piede che sta tirando.' },
+        { n:'3', name:'In guardia, braccio ad imbuto', video:'arancio_7_3.mp4', desc:'Braccio dietro va a protezione dell\'inguine sia interno che esterno al calcio, esco esternamente al calcio (meno pericoloso), colpisco col pugno.' },
+        { n:'4', name:'Posizione naturale: schiaffetto (dita compatte)', video:'arancio_7_4.mp4', desc:'No spostamento dei piedi ma rotazione dell\'anca, parata sempre esterna al calcio, esco esternamente facendo passo avanti con gamba omolaterale, colpisco in base alla distanza con calcio o colpi vari.' }
       ]},
       { title:'Difese da low kick', items:[
-        { n:'1', name:'Alzare tibia e parare caviglia', video:'arancio_8_1.mp4', desc:'Alza la tibia e vai a parare su sua caviglia o su suo piede.' },
-        { n:'2', name:'Blocco', video:'arancio_8_2.mp4', desc:'Da guardia: piccolo passo in avanti e carica tutto il peso sulla gamba avanti (blocco).' }
+        { n:'1', name:'Alzare tibia e andare a parare sua caviglia o su suo piede', video:'arancio_8_1.mp4', desc:'Alzo la tibia e vado a parare su sua caviglia o su suo piede.' },
+        { n:'2', name:'Da guardia: piccolo passo in avanti e carico tutto peso sulla gamba avanti (blocco)', video:'arancio_8_2.mp4', desc:'Da guardia: piccolo passo in avanti e carico tutto il peso sulla gamba avanti (blocco).' }
       ]},
       { title:'Difese da prese ai polsi', items:[
-        { n:'1', name:'Presa controlaterale (a specchio)', video:'arancio_9_1.mp4', desc:'Piede in corrispondenza del braccio che ti afferra si avvicina al piede dell\'aggressore ruotando esternamente. Tieni il gomito vicino al corpo, rotazione del corpo esterna ruotando la mano con palmo verso il basso, colpisci trachea o naso.' },
-        { n:'2', name:'Presa omolaterale', video:'arancio_9_2.mp4', desc:'A) Con l\'altra mano afferra il polso, calcia con la gamba esterna, ruota il palmo verso l\'alto, passo avanti esterno e colpisci con avambraccio alla gola. B) Palmo verso il corpo, ruota avambraccio verso l\'esterno, colpisci il gomito con mano libera.' },
-        { n:'3', name:'A due mani su una mano', video:'arancio_9_3.mp4', desc:'A) Afferra da sopra il tuo pugno, tira verso l\'alto, quando il pollice supera il polso dell\'aggressore il polso ruota verso l\'esterno, poi pugno a martello. B) Da sotto afferra il pollice controlaterale dell\'aggressore e tiralo verso il basso. Calcio frontale.' },
-        { n:'4', name:'Presa a due mani su entrambi i polsi', video:'arancio_9_4.mp4', desc:'Mani aperte, porta i gomiti verso di lui. Una volta divincolato afferra l\'aggressore al collo con entrambi gli avambracci, stringi e ginocchiata ai testicoli.' },
-        { n:'5', name:'Presa a due mani su entrambi i polsi da dietro', video:'arancio_9_5.mp4', desc:'Vai indietro col corpo fino al contatto portando polsi avanti. Una volta superato il bacino, i palmi ruotano verso l\'alto e spingi indietro il gluteo mentre spingi verso il basso le braccia. Contrattacco con gomitata 8.' }
+        { n:'1', name:'Difesa da presa ai polsi con mano controlaterale (a specchio)', video:'arancio_9_1.mp4', desc:'Piede in corrispondenza del braccio che mi afferra si avvicina al piede dell\'aggressore ruotando esternamente all\'avversario, tengo il gomito vicino al corpo, rotazione del corpo esterna all\'avversario ruotando la mano con palmo verso il basso, colpisco trachea o naso con avambraccio del lato opposto.' },
+        { n:'2', name:'Presa con mano omolaterale', video:'arancio_9_2.mp4', desc:'A) Con l\'altra mano afferrare il polso dello sparring, calciare con gamba esterna, ruotare il palmo della mano bloccata verso l\'alto, passo avanti esterno e con la stessa colpisco con avambraccio alla gola o spina del naso. B) Palmo verso il corpo, ruoto avambraccio verso l\'esterno, quando aggressore espone il gomito (intraruotato), colpisco il gomito con mano libera con spostamento d\'anca.' },
+        { n:'3', name:'A due mani su una mano', video:'arancio_9_3.mp4', desc:'A) Afferro da sopra il mio pugno, lo tiro verso l\'alto, appena il mio pollice supera polso dell\'aggressore il polso ruota verso l\'esterno, poi pugno a martello. B) Da sotto afferro pollice contro laterale (a specchio) dell\'aggressore e lo tiro verso il basso (leva). Calcio frontale.' },
+        { n:'4', name:'Presa a due mani su entrambi polsi', video:'arancio_9_4.mp4', desc:'Mani aperte, porto i gomiti verso di lui, una volta che mi sono divincolato afferro l\'aggressore al collo con entrambi gli avambracci, stringo e ginocchiata ai testicoli (poi posso stringere e lanciarlo).' },
+        { n:'5', name:'Presa a due mani su entrambi i polsi da dietro', video:'arancio_9_5.mp4', desc:'Vado indietro col corpo fino al contatto portando polsi avanti, una volta superato il bacino, i palmi delle mani ruotano verso l\'alto e spingo indietro il gluteo mentre spingo verso il basso le braccia per uscire dalla presa, contrattacco con gomitata 8.' }
       ]},
       { title:'Difese da strangolamento da dietro con avambraccio', items:[
-        { n:'1', name:'Giro, colpo e disarmo', video:'arancio_10_1.mp4', desc:'Gira, colpisci ai testicoli, allarga la presa con entrambe le mani e torsione della testa e delle anche, sfila, leva. Mani più lontane possibile dal gomito. Rotazione interna dell\'anca e colpo ai testicoli simultanei, ginocchiate al petto, porta a terra con leva al polso.' }
+        { n:'1', name:'Giro, colpisco ai testicoli, allargo la presa e torsione della testa e delle anche, mi sfilo, leva', video:'arancio_10_1.mp4', desc:'Le mani entrambe più possibile lontane dal gomito dell\'aggressore (momento torcente); rotazione interna dell\'anca e contemporaneamente colpo ai testicoli con la mano più vicina, continuare rotazione tenendo l\'avambraccio dell\'aggressore vicino a sé, ginocchiate al petto e portare a terra con leva al polso con controllo del gomito ("acceleratore e sterzo").' }
       ]},
       { title:'Difese da strangolamento frontale dinamico', items:[
-        { n:'', name:'Strangolamento con spinta', video:'arancio_11_1.mp4', desc:'Passo indietro, con mano omolaterale della gamba dietro blocca la mano dell\'avversario, il braccio si solleva esternamente (indico la luna), metti in leva l\'altra mano con gomito, gomitata (senza mai mollare l\'altra mano), ginocchiata con gamba avanti.' }
+        { n:'', name:'Strangolamento con spinta', video:'arancio_11_1.mp4', desc:'Passo indietro, con mano omolaterale della gamba dietro blocco mano avversario, braccio si solleva esternamente (indico la luna), metto in leva l\'altra mano con gomito, gomitata (senza mai mollare l\'altra mano), ginocchiata con gamba avanti richiamando gamba dietro. Nella messa in leva non esagerare movimento perché aggressore potrebbe togliere la mano.' }
+      ]},
+      { title:'Difese da strangolamento da dietro dinamico', items:[
+        { n:'', name:'Con spinta: blocco, ruoto, braccio che punta la luna indietro, colpo alle costole', video:'arancio_12_1.mp4', desc:'Blocco spinta avanzando con una gamba, con mano contro laterale sollevo braccio quel tanto che basta per uscire dalla presa e con la stessa mano colpisco alle costole fluttuanti. (Proseguo con calcio). Attenzione a non ruotare eccessivamente.' }
       ]},
       { title:'Difese da strangolamento da presa in cravatta da dietro', items:[
-        { n:'1', name:'Presa in cravatta da dietro - elicottero', video:'arancio_12_1.mp4', desc:'Posiziona la tua gamba più vicina all\'aggressore dietro di lui, con mano esterna colpisci i testicoli. A) Pressione sotto naso con medio. B) Pressione all\'occhio più vicino passando da dietro. C) Afferra barba o basetta. D) Afferra capelli. E) Dito ad amo in bocca lateralmente.' }
+        { n:'1', name:'Presa in cravatta da dietro — elicottero', video:'arancio_13_1.mp4', desc:'Aggressore mi afferra da dietro ("Elicottero"): Posiziono la mia gamba più vicina all\'aggressore dietro di lui, contemporaneamente con mano esterna colpisco i testicoli; ho tre possibili conclusioni, da eseguire alternativamente in contemporanea al colpo ai testicoli: A) Con medio della mano interna pressione sotto naso (prima spingo indietro poi pressione verso il basso) unica tecnica in cui braccio è interposto tra la mia testa e quella dell\'aggressore. Colpo pomo d\'Adamo. B) Pressione all\'occhio a me più vicino (passando da dietro) entrando nel canale lacrimale. C) Afferrare barba o basetta. D) Afferrare capelli. E) Dito ad amo in bocca lateralmente.' }
       ]},
       { title:'Difese da strangolamento da presa in cravatta da davanti', items:[
-        { n:'2', name:'Fuga', video:'arancio_13_1.mp4', desc:'Afferra con entrambe le mani i polsi che chiudono al collo e in rapida sequenza colpo di palmo ai genitali, gomitata al mento. Con il braccio che ha colpito fatti spazio in avanti.' },
-        { n:'2b', name:'Standard', video:'arancio_13_2.mp4', desc:'Afferra con entrambe le mani i polsi che chiudono al collo, con la mano più vicina colpo di palmo ai genitali, gomitata al mento. Uscendo colpo e pressione sul processo popliteo.' },
-        { n:'3', name:'Torsione con controllo', video:'arancio_13_3.mp4', desc:'Afferra con entrambe le mani i polsi che chiudono al collo, colpo di palmo ai genitali, gomitata al mento, torsione verso l\'esterno tenendo con entrambe le mani il dorso della mano ed il polso dell\'aggressore sul petto.' }
+        { n:'2', name:'Difesa da strangolamento da presa in cravatta da davanti con fuga', video:'arancio_14_1.mp4', desc:'Afferra con entrambe le mani i polsi che chiudono al collo e in rapida sequenza colpo di palmo ai genitali, gomitata al mento. Con il braccio che ha colpito fatti spazio in avanti.' },
+        { n:'2', name:'Difesa da strangolamento da presa in cravatta da davanti', video:'arancio_14_2.mp4', desc:'Afferra con entrambe le mani i polsi che chiudono al collo, con la mano più vicina colpo di palmo ai genitali, gomitata al mento. Uscendo colpo e pressione sul processo popliteo.' },
+        { n:'3', name:'Difesa da strangolamento da presa in cravatta da davanti', video:'arancio_14_3.mp4', desc:'Afferrare con entrambe le mani i polsi che chiudono al collo e colpo di palmo ai genitali, gomitata al mento torsione verso l\'esterno tenendo con entrambe le mani il dorso della mano ed il polso dell\'aggressore sul mio petto.' }
       ]},
       { title:'Esame', items:[
         { n:'', name:'Combattimento a contatto leggero', video:'', desc:'2 round da 2 minuti - 30 secondi di riposo.' },
@@ -303,45 +312,45 @@ const BELTS = [
     id:'verde', name:'Cintura Verde', color:'#2a8a2a',
     sections:[
       { title:'Cadute', items:[
-        { n:'1', name:'Capriola in avanti scavalcando tre colpitori', video:'verde_1_1.mp4', desc:'Con rincorsa scavalca tre colpitori e alzarsi in guardia.' },
+        { n:'1', name:'Capriola in avanti scavalcando tre colpitori (con rincorsa) e alzarsi in guardia', video:'verde_1_1.mp4', desc:'Capriola in avanti con rincorsa scavalcando tre colpitori, alzarsi in guardia.' },
         { n:'2', name:'Capriola laterale con una mano', video:'verde_1_2.mp4', desc:'Capriola laterale con una mano dx e sx.' },
-        { n:'3', name:'Capriola in avanti a terra (judo)', video:'verde_1_3.mp4', desc:'Rimanere a terra, tipo judo.' }
+        { n:'3', name:'Carpiola in avanti rimanendo a terra', video:'verde_1_3.mp4', desc:'Tipo judo.' }
       ]},
       { title:'Calci - Acquisizione fluidità', items:[
         { n:'1', name:'Tutti i calci a tutte e 3 le altezze', video:'verde_2_1.mp4', desc:'Esegui ogni calcio alle tre altezze: tibia, medio, alto.' },
-        { n:'2', name:'Calcio frontale con saltello e cambio guardia', video:'verde_2_2.mp4', desc:'Da distanza ravvicinata, per guadagnare spazio e colpire i testicoli fai un saltello con cambio guardia.' },
-        { n:'3', name:'Calcio con rincorsa e sforbiciata', video:'verde_2_3.mp4', desc:'Da posizione naturale: calcio con rincorsa e sforbiciata.' },
-        { n:'4', name:'Calcio frustato', video:'verde_2_4.mp4', desc:'Colpisci con il collo del piede i testicoli. Gamba dietro (più potente) o gamba davanti (più veloce).' }
+        { n:'2', name:'Calcio frontale con gamba dietro con saltello e cambio guardia', video:'verde_2_2.mp4', desc:'Da distanza ravvicinata, per guadagnare spazio e colpire i testicoli faccio un saltello.' },
+        { n:'3', name:'Posizione naturale: calcio con rincorsa e sforbiciata', video:'verde_2_3.mp4', desc:'Da posizione naturale: calcio con rincorsa e sforbiciata.' },
+        { n:'4', name:'Calcio frustato', video:'verde_2_4.mp4', desc:'Colpisco con il collo del piede i testicoli; posso colpire sia con gamba dietro (più potente) che con gamba davanti (più veloce).' }
       ]},
       { title:'Difese da calcio circolare alto', items:[
-        { n:'1', name:'Parata 2a guardia A - accorcia distanza', video:'verde_3_1.mp4', desc:'Arriva il calcio, avvicinati alla gamba che sta per colpirti per chiudere la distanza. Afferra da sotto la sua gamba, la mano libera va su spalla e fai o soto gari. Tieni il controllo della gamba, fai leva sulla caviglia e gira in posizione prona. Immobilizza sul tendine d\'achille.' },
-        { n:'2', name:'Parata 2a guardia B - accorcia distanza', video:'verde_3_2.mp4', desc:'Parata in seconda guardia, afferra la gamba, indietreggia e fai cadere l\'avversario di pancia. Prendi una gamba e piegala su ginocchio nel processo popliteo, immobilizza con l\'altra.' },
-        { n:'3', name:'Parata in seconda guardia', video:'verde_3_3.mp4', desc:'Porta braccio sx a protezione dell\'orecchio e gamba sx alta (gomito e ginocchio si toccano), con l\'altra mano colpisci avanzando.' },
-        { n:'4', name:'Parata in seconda guardia', video:'verde_3_4.mp4', desc:'Abbassati, mano sx sopra la testa in parata n°7, avanza con gamba dx e ruotando spingi con mano dx all\'interno coscia.' }
+        { n:'1', name:'Parata in seconda guardia A accorciando la distanza', video:'verde_3_1.mp4', desc:'Arriva il calcio, mi avvicino alla gamba che mi sta per colpire per chiudere la distanza, con il braccio afferro da sotto la sua gamba, la mano libera va su spalla e faccio o soto gari, una volta a terra tengo il controllo della gamba, faccio leva sulla caviglia e lo giro in posizione prona. A questo punto cambio presa sulla caviglia ed immobilizzo facendo leva sul tendine di achille.' },
+        { n:'2', name:'Parata in seconda guardia B accorciando la distanza', video:'verde_3_2.mp4', desc:'Arriva il calcio, parata in seconda guardia, afferro sua gamba, indietreggio e faccio cadere l\'avversario di pancia. Una volta a terra prendo una gamba e la piego su ginocchio nel processo popliteo (dietro al ginocchio) ed immobilizzo con l\'altra.' },
+        { n:'3', name:'Parata in seconda guardia', video:'verde_3_3.mp4', desc:'Porto braccio sx a protezione dell\'orecchio e gamba sx alta (gomito e ginocchio si toccano) con l\'altra mano colpisco avanzando.' },
+        { n:'4', name:'Parata in seconda guardia', video:'verde_3_4.mp4', desc:'Mi abbasso, mano sx sopra la testa in parata n°7, avanzo con gamba dx e ruotando spingo con mano dx all\'interno coscia.' }
       ]},
       { title:'Difese da calcio circolare medio', items:[
-        { n:'1', name:'In guardia o posizione naturale difensiva: parare sulla coscia e sulla tibia con avambracci.', video:'verde_4_1.mp4', desc:'Avanza ruotando portando avanti la gamba dal lato opposto (se aggredisce con dx avanzi con sx), para con avambracci su tibia e coscia, colpi.' },
-        { n:'2', name:'Parata braccio ad imbuto, afferro (spazzo o rotazione o colpi)', video:'verde_4_2.mp4', desc:'Avanza in diagonale, anticipa il colpo, posiziona le braccia a protezione del viso e del fianco con i gomiti che si toccano. Afferra coscia poi: A) o soto gari; B) rotazione nella direzione del calcio; C) tira indietro facendo cadere l\'aggressore.' }
+        { n:'1', name:'In guardia o posizione naturale difensiva: parare sulla coscia e sulla tibia con avambracci', video:'verde_4_1.mp4', desc:'Avanzo ruotando e portando avanti la gamba dal lato opposto (es se mi aggredisce con dx avanzo con sx), paro con avambracci su tibia e coscia, colpi.' },
+        { n:'2', name:'Parata braccio ad imbuto, afferro (spazzo o rotazione o colpi)', video:'verde_4_2.mp4', desc:'Avanzo in diagonale, devo anticipare il colpo, posiziono le braccia a protezione del viso e del fianco, i gomiti devono toccarsi, afferro coscia, poi: A) porto giù spazzando con o soto gari; B) rotazione nella direzione del calcio; C) tiro indietro facendo cadere l\'aggressore.' }
       ]},
       { title:'Difese da prese al corpo da davanti', items:[
-        { n:'1A', name:'Braccia bloccate altezza spalle', video:'verde_5_1.mp4', desc:'Urlo, morso all\'orecchio o al trapezio. Sposta indietro il bacino, mani tipo bagher per colpire i genitali, poi mani sulle spalle, ginocchiata, con leva al gomito porta a terra.' },
-        { n:'1B', name:'Braccia bloccate altezza gomiti', video:'verde_5_2.mp4', desc:'Ginocchiata nei testicoli, sfila una mano e: A) leva alla spina del naso; B) dita nell\'occhio; C) morso alla spalla; D) presa al mento con spinta.' },
-        { n:'1C', name:'Con sollevamento da terra', video:'verde_5_3.mp4', desc:'Sforbiciata (cavo popliteo con tallone esterno, tibia con piede interno). Colpi vari.' },
-        { n:'3A', name:'Risposta A', video:'verde_5_4.mp4', desc:'Saltello all\'indietro, calcio ai genitali con la gamba davanti e gomitata con il braccio avanti dall\'alto verso il basso.' },
-        { n:'3B', name:'Risposta B', video:'verde_5_5.mp4', desc:'Passo laterale e colpo di avambraccio al viso.' },
-        { n:'3C', name:'Risposta C', video:'verde_5_6.mp4', desc:'Afferrare il viso e torsione del collo (mento gira verso me stesso).' },
-        { n:'4', name:'Mani libere, presa corpo', video:'verde_5_7.mp4', desc:'A) Il bacino si sposta di lato per colpire con palmo della mano ai testicoli. Quando molla colpi vari. B) Afferra le braccia dell\'aggressore, proietta facendo autocaduta. Una volta caduto carica in monta e colpisci.' },
-        { n:'5', name:'Presa tipo rugby', video:'verde_5_8.mp4', desc:'A) Calcio genitali. B) Colpo di avambraccio. C) Torsione del collo.' },
-        { n:'6', name:'Sprawl', video:'verde_5_9.mp4', desc:'L\'aggressore tenta di afferrarti il bacino. Blocca la sua azione buttandoti indietro e lasciati cadere di peso su di lui afferrandolo.' }
+        { n:'1', name:'Braccia bloccate altezza spalle', video:'verde_5_1.mp4', desc:'Urlo, morso all\'orecchio o al trapezio. Spostare indietro bacino, mani si uniscono tipo bagher per colpire i genitali, poi mani vanno sulle spalle, ginocchiata, con leva al gomito porta a terra.' },
+        { n:'2', name:'Braccia bloccate altezza gomiti', video:'verde_5_2.mp4', desc:'Ginocchiata nei testicoli, sfila una mano e: A) leva alla spina del naso con pollice o medio; B) dita nell\'occhio; C) morso alla spalla; D) presa al mento con spinta.' },
+        { n:'3', name:'Con sollevamento da terra', video:'verde_5_3.mp4', desc:'Sforbiciata (cavo popliteo con tallone esterno, tibia con piede interno). Colpi vari.' },
+        { n:'4A', name:'Mani libere, presa corpo — pressione canale lacrimale', video:'verde_5_4.mp4', desc:'Pollici eseguono pressione canale lacrimale, prima spingi indietro e poi in basso.' },
+        { n:'4B', name:'Mani libere, presa corpo — rotazione della testa', video:'verde_5_5.mp4', desc:'Rotazione della testa.' },
+        { n:'5A', name:'Presa tipo rugby — saltello all\'indietro', video:'verde_5_6.mp4', desc:'Saltello all\'indietro, calcio ai genitali con la gamba davanti e gomitata con il braccio avanti dall\'alto verso il basso.' },
+        { n:'5B', name:'Presa tipo rugby — passo laterale', video:'verde_5_7.mp4', desc:'Passo laterale e colpo di avambraccio al viso.' },
+        { n:'5C', name:'Presa tipo rugby — torsione del collo', video:'verde_5_8.mp4', desc:'Afferrare il viso e torsione del collo (mento gira verso me stesso).' },
+        { n:'6', name:'Sprawl', video:'verde_5_9.mp4', desc:'Aggressore tenta di afferrarmi il bacino. Blocco la sua azione buttandomi indietro e mi lascio cadere di peso su di lui afferrandolo.' }
       ]},
       { title:'Difese da prese al corpo da dietro', items:[
-        { n:'1A', name:'Braccia bloccate - colpi ai testicoli', video:'verde_6_1.mp4', desc:'Colpi ai testicoli con mani bloccate.' },
-        { n:'1B', name:'Braccia bloccate - proiezione', video:'verde_6_2.mp4', desc:'Afferra le sue braccia accucciandoti, proiezione d\'anca cadendogli addosso.' },
-        { n:'2A', name:'Braccia libere - abbassarsi', video:'verde_6_3.mp4', desc:'Abbassati, afferra i pantaloni.' },
-        { n:'2B', name:'Braccia libere - noccolata e leva', video:'verde_6_4.mp4', desc:'Afferra la mano più in alto, colpisci con talloni o pestoni sui piedi, noccolata sul dorso della mano. Ruota portando in leva le sue dita verso di lui, porta a terra.' },
-        { n:'2C', name:'Braccia libere - kimura', video:'verde_6_5.mp4', desc:'Afferra braccio controlaterale, calci, colpisci con i talloni, calcio del mulo, poi passa sotto il braccio bloccato ed esegui kimura, porta a terra.' },
-        { n:'3', name:'Braccia bloccate sospeso', video:'verde_6_6.mp4', desc:'Tallonata doppia ai genitali o alle tibie, vai a terra o proiezione.' },
-        { n:'4', name:'Braccia libere sospeso', video:'verde_6_7.mp4', desc:'Porta i piedi in alto e buttati verso il basso ("pendolo"), proietta.' }
+        { n:'1A', name:'Braccia bloccate piedi a terra — colpi ai testicoli', video:'verde_6_1.mp4', desc:'E\' il bacino che si sposta di lato per colpire con palmo della mano ai testicoli, quando molla colpi vari.' },
+        { n:'1B', name:'Braccia bloccate piedi a terra — proiezione', video:'verde_6_2.mp4', desc:'Afferro le braccia dell\'aggressore, proietto facendo autocaduta. Rotazione con autocaduta e arrivo con la mano nei suoi testicoli (applicazione caduta tipo judo). Una volta caduto carico in monta e colpisco. Si può eseguire sia tenendo la gamba sinistra avanti che la gamba destra, ma la proiezione va effettuata nella stessa direzione (se tengo gamba sx avanti con la gamba dx faccio da ostacolo tai o toshi).' },
+        { n:'2A', name:'Braccia libere piedi a terra — abbassarsi, afferrare i pantaloni', video:'verde_6_3.mp4', desc:'Mi abbasso, afferro i pantaloni.' },
+        { n:'2B', name:'Braccia libere piedi a terra — noccolata', video:'verde_6_4.mp4', desc:'Afferro la mano più in alto con lo stesso braccio, colpisco con talloni o pestoni sui piedi, noccolata sul dorso della mano, la mano afferra le dita col palmo rivolto verso di me e il pollice in alto (*errore comune), ruotando, il gomito è all\'altezza del petto dell\'avversario porto in leva le sue dita verso di lui, porto a terra.' },
+        { n:'2C', name:'Braccia libere piedi a terra — kimura', video:'verde_6_5.mp4', desc:'Afferro braccio controlaterale, calci, colpisco con i talloni, calcio del mulo, poi creando spazio per ruotare il bacino, passo sotto braccio bloccato (altezza gomito) con l\'altro mio braccio ed eseguo kimura, porto a terra.' },
+        { n:'3', name:'Braccia bloccate sospeso', video:'verde_6_6.mp4', desc:'Tallonata doppia ai genitali o alle tibie, vado a terra o proiezione e lì uso tecniche di difesa da presa a terra. (se braccia libere uso anche gomitate).' },
+        { n:'4', name:'Braccia libere sospeso: tallonata ai genitali', video:'verde_6_7.mp4', desc:'Porto i piedi in alto e mi butto verso il basso ("pendolo"), proietto.' }
       ]},
       { title:'Difesa da presa al corpo laterale', items:[
         { n:'1', name:'Presa al corpo laterale', video:'verde_7_1.mp4', desc:'Mano più vicina afferra il braccio, l\'altra colpisce all\'inguine, poi: A) con gomito striscio su sterno o pressione. B) Proietta facendo ostacolo con gamba più vicina.' }
@@ -349,35 +358,37 @@ const BELTS = [
       { title:'Difese da strangolamento da dietro con corda in piedi', items:[
         { n:'1', name:'Mi giro avvicinandomi e colpisco', video:'verde_8_1.mp4', desc:'Mi giro (piede dx va a sx), una volta che sono di fronte ginocchiata o colpo all\'inguine con la gamba che non ha ruotato.' }
       ]},
-      { title:'Difese da prese al corpo con una mano — Leve', items:[
-        { n:'1', name:'Mi giro avvicinandomi e colpisco', video:'verde_9_1.mp4', desc:'Giro (piede dx va a sx), una volta di fronte ginocchiata o colpo all\'inguine con la gamba che non ha ruotato.' },
-        { n:'2', name:'Aggressore afferra maglia con una mano', video:'verde_9_2.mp4', desc:'Blocca sua mano al petto con mano controlaterale, colpisci con mano opposta. Afferra con mano omolaterale la sua mano, posiziona i pollici nell\'incavo e le dita sulle nocche, ruota con palmo esterno e mignolo in alto. Prosegui con leva.' }
+      { title:'Difese da prese al corpo con una mano — Studio delle leve', items:[
+        { n:'', name:'Aggressore mi afferra maglia con una mano', video:'verde_9_1.mp4', desc:'Blocco sua mano al mio petto con mano controlaterale, colpisco con mano opposta (serie di colpi, anche ginocchiate), afferro con mano omolaterale la sua mano, posiziono i pollici nell\'incavo della mano e dita si chiudono sulle nocche, la ruoto facendo in modo che lui abbia il palmo esterno ed il mignolo in alto. Proseguo con leva, in base al grado di flessione del gomito dell\'aggressore:' },
+        { n:'1', name:'Mantengo il suo braccio teso, leva in basso e verso di me', video:'verde_9_2.mp4', desc:'Mantengo il suo braccio teso, leva in basso e verso di me, poi senza lasciare la leva collasso su di lui.' },
+        { n:'2', name:'Come la 1 ma non ho linearità braccio', video:'verde_9_3.mp4', desc:'Come la 1 ma non ho linearità braccio, mano sx sul gomito ed eseguo torsione polso + spingo in basso il gomito.' },
+        { n:'3', name:'Entrambi pollici fanno pressione sul dorso', video:'verde_9_4.mp4', desc:'Entrambi pollici fanno pressione sul dorso, faccio in modo che le dita dell\'avversario vadano verso il suo gomito.' },
+        { n:'4', name:'Afferro con mano controlaterale, rotazione antioraria', video:'verde_9_5.mp4', desc:'Afferro con mano controlaterale, la omolaterale raddoppia, rotazione antioraria, 4 dita su flessore del pollice, il mio pollice va sul mignolo. A) avanzo con gamba interna direzione 30° oppure B) rotazione e avambraccio va su gomito omolaterale.' }
       ]},
       { title:'Studio delle leve alla spalla', items:[
-        { n:'1', name:'Laterale "da bar" esterna', video:'verde_10_1.mp4', desc:'Posiziona mano controlaterale sulla sua spalla passando da sotto (dietro), colpo di palmo al viso con mano più lontana, raddoppio della mano sulla spalla e leva. Una mano tira e l\'altra va in torsione.' },
-        { n:'2', name:'Laterale "da bar" interna', video:'verde_10_2.mp4', desc:'Posiziona mano controlaterale sulla spalla da sopra, colpo di palmo al viso e leva portando l\'avambraccio su suo braccio (gomiti in linea), esegui rotazione antioraria del braccio.' },
-        { n:'3', name:'Frontale', video:'verde_10_3.mp4', desc:'Braccio omolaterale entra sul gomito dall\'alto verso il basso, rotazione del braccio e se arrivi afferra la trachea. Spostati con il corpo dietro all\'aggressore.' },
-        { n:'4', name:'Waki gatame', video:'verde_10_4.mp4', desc:'Blocca la sua mano con mano omolaterale e leva dall\'alto verso il basso con mano controlaterale e leva alla spalla (ascella su suo braccio). Rotazione del corpo per non far uscire dalla leva, cedi con le gambe in avanti.' },
-        { n:'5', name:'Leva al gomito (ude osae)', video:'verde_10_5.mp4', desc:'Blocca la sua mano con mano omolaterale e leva dall\'alto verso il basso mettendo in leva il gomito col mio avambraccio, porta a terra.' }
+        { n:'1', name:'Laterale "da bar" esterna', video:'verde_10_1.mp4', desc:'Posiziono mano controlaterale sulla sua spalla passando da sotto (dietro), colpo di palmo al viso con mano più lontana, raddoppio della mano sulla spalla e leva. (Una mano tira e l\'altra va in torsione).' },
+        { n:'2', name:'Laterale "da bar" interna', video:'verde_10_2.mp4', desc:'Posiziono mano controlaterale sulla spalla da sopra, colpo di palmo al viso con mano più lontana e leva portando il mio avambraccio su suo braccio (gomiti in linea) ed eseguo rotazione antioraria del braccio.' },
+        { n:'3', name:'Frontale', video:'verde_10_3.mp4', desc:'Braccio omolaterale (dx con dx) entro sul gomito dall\'alto verso il basso, rotazione del braccio e se arrivo afferro trachea. Mi sposto con il corpo dietro all\'aggressore.' },
+        { n:'4', name:'Waki gatame', video:'verde_10_4.mp4', desc:'Blocco la sua mano con mano omolaterale e leva dall\'alto verso il basso con mano controlaterale e leva alla spalla (ascella su suo braccio). N.b. rotazione del corpo per non far uscire dalla leva, cedo con le gambe in avanti.' },
+        { n:'5', name:'Leva al gomito (ude osae)', video:'verde_10_5.mp4', desc:'Blocco la sua mano con mano omolaterale e leva dall\'alto verso il basso mettendo in leva gomito col mio avambraccio, porto a terra.' }
       ]},
       { title:'Difese da presa ai capelli', items:[
-        { n:'1', name:'Da davanti - presa che tira verso il basso', video:'verde_11_1.mp4', desc:'Le mani afferrano la sua mano, crea lo spazio e tira un calcio ai testicoli, poi A) mani rimangono attaccate alla testa, segui la sua discesa facendo leva sulla sua mano, oppure B) ruota lateralmente rimanendo esterno al braccio dell\'avversario.' },
-        { n:'2', name:'Da davanti - presa che resta alta', video:'verde_11_2.mp4', desc:'Le mani afferrano la sua mano, calcio ai testicoli. Se tiene i capelli: A) leva al polso fino a terra. Se molla: B) leva n°1.' },
-        { n:'3', name:'Di lato', video:'verde_11_3.mp4', desc:'Braccio più vicino va in protezione del viso e contemporaneamente colpo di palmo ai genitali con la mano più lontana, prosegui con colpi vari.' },
-        { n:'4A', name:'Da dietro — kimura esterna', video:'verde_11_4.mp4', desc:'Guardo con che mano mi sta tenendo, ruoto verso l\'aggressore facendo un passo indietro con la gamba del lato opposto al braccio con cui mi tiene, devo arrivare esterna alle sue gambe. Se mi trovo all\'interno del suo braccio, la mano più vicina a protezione del viso e l\'altra colpisce ai genitali, poi la prima blocca da sopra e la seconda chiude la kimura.' },
-        { n:'4B', name:'Da dietro — leva "da bar"', video:'verde_11_5.mp4', desc:'Guardo con che mano mi sta tenendo, ruoto verso l\'aggressore facendo un passo indietro con la gamba del lato opposto. Se mi trovo all\'esterno del suo braccio eseguo la leva "da bar".' },
-        { n:'5', name:'Da dietro — dinamica', video:'verde_11_6.mp4', desc:'Blocca da sopra la mano dell\'aggressore con entrambe le mani, abbassati ruotando verso l\'aggressore, calcio ai testicoli, leva al polso andando verso l\'alto.' }
+        { n:'1', name:'Da davanti con presa che tira verso il basso', video:'verde_11_1.mp4', desc:'Le mani afferrano la sua mano, creo lo spazio e tiro un calcio ai testicoli, poi A) mani rimangono attaccate alla testa, seguo la sua discesa facendo la leva sulla sua mano, o B) ruoto lateralmente rimanendo esterno al braccio dell\'avversario (rotazione verso l\'interno dell\'avversario).' },
+        { n:'2', name:'Da davanti con presa che resta alta', video:'verde_11_2.mp4', desc:'Le mani afferrano la sua mano, calcio ai testicoli e se tiene i capelli: A) leva al polso fino a terra; se molla: B) leva n°1.' },
+        { n:'3', name:'Di lato', video:'verde_11_3.mp4', desc:'Braccio più vicino va in protezione del viso e contemporaneamente colpo di palmo ai genitali con la mano più lontana, proseguo con colpi vari.' },
+        { n:'4', name:'Da dietro (non so che braccio mi tiene) quindi: A) esterno kimura; B) leva "da bar"', video:'verde_11_4.mp4', desc:'Guardo con che mano mi sta tenendo, ruoto verso l\'aggressore facendo un passo indietro con la gamba del lato opposto al braccio con cui mi tiene, devo arrivare esterna alle sue gambe e A) se mi trovo all\'interno del suo braccio, la mano più vicina a protezione del viso e l\'altra colpisce ai genitali, poi la prima blocca da sopra la seconda chiude la kimura.' },
+        { n:'5', name:'Da dietro dinamica', video:'verde_11_5.mp4', desc:'Blocco da sopra la mano dell\'aggressore con entrambe le mani, mi abbasso ruotando verso l\'aggressore, calcio ai testicoli, e leva al polso andando verso l\'alto.' }
       ]},
       { title:'Difese da prese ai polsi a terra', items:[
-        { n:'1', name:'Tentativo di bloccaggio sopra alla testa', video:'verde_12_1.mp4', desc:'Schiena a terra, l\'aggressore è sopra: sfrutta la spinta delle braccia per portarle ai fianchi, spingi a ponte, dopo il ribaltamento prosegui con colpi al viso.' },
-        { n:'2', name:'Braccia bloccate sopra alla testa', video:'verde_12_2.mp4', desc:'Schiena a terra: sfrutta la spinta delle sue braccia per unire le mani e afferrare il polso dell\'aggressore, porta in leva al gomito (tipo waki gatame).' }
+        { n:'1', name:'Tentativo di bloccaggio sopra alla testa', video:'verde_12_1.mp4', desc:'Schiena a terra, l\'aggressore è sopra: sfruttare la spinta delle braccia per portare le braccia ai fianchi, spingere a ponte, dopo il ribaltamento proseguo con colpi al viso.' },
+        { n:'2', name:'Braccia bloccate a terra sopra alla testa', video:'verde_12_2.mp4', desc:'Schiena a terra, l\'aggressore è sopra: sfruttare la spinta delle sue braccia per unire le mani e afferrare il polso dell\'aggressore, portare in leva al gomito (tipo waki gatame).' }
       ]},
       { title:'Difese da strangolamento a terra', items:[
         { n:'1', name:'Da sopra aggressore a cavalcioni', video:'verde_13_1.mp4', desc:'Da sopra: doppio colpo ai gomiti (pollici esterni), ponte, ribaltamento e colpi.' },
-        { n:'2A', name:'Aggressore in mezzo gambe — entrambe bloccate', video:'verde_13_2.mp4', desc:'Da sopra, le sue gambe sono in mezzo alle mie, afferra le mani e le gambe vanno in chiusura sui suoi gomiti extraruotati, porta a terra e pugno ai genitali.' },
-        { n:'2B', name:'Aggressore in mezzo gambe — riesce a sfilarne una', video:'verde_13_3.mp4', desc:'Da sopra, le sue gambe sono in mezzo alle mie, afferra le mani ma ne sfila una: le gambe vanno in chiusura su un braccio e collo (triangolo tradizionale brasilian ju jitzu), porta a terra e strangola.' },
-        { n:'3', name:'Da sopra: sfilo il bacino e kimura', video:'verde_13_4.mp4', desc:'L\'aggressore è in mezzo alle gambe. Le sue gambe sono in mezzo alle ns, apro le sue mani (pollice interno), sfilo lateralmente il bacino (se ho bloccato con mano sx, spinge la gamba dx esce cresta iliaca dx), colpisco con l\'altro avambraccio collo/mandibola e kimura.' },
-        { n:'4', name:'Da sopra: sfilo il bacino e sforbiciata', video:'verde_13_5.mp4', desc:'Sfilo lateralmente il bacino e con sforbiciata faccio cadere l\'aggressore (o colpisco alla testa o sotto l\'ascella).' }
+        { n:'2A', name:'Aggressore in mezzo alle nostre gambe — entrambe bloccate', video:'verde_13_2.mp4', desc:'Da sopra, le sue gambe sono in mezzo alle mie, afferro le mani e le gambe vanno in chiusura sui suoi gomiti, porto a terra e pugno ai genitali (gomiti extraruotati).' },
+        { n:'2B', name:'Aggressore in mezzo alle nostre gambe — riesce a sfilarne una', video:'verde_13_3.mp4', desc:'Da sopra, le sue gambe sono in mezzo alle ns, afferro le mani ma ne riesce a sfilare una, le gambe vanno in chiusura su un braccio e collo (triangolo tradizionale brasilian ju jitzu), porto a terra e strangolo.' },
+        { n:'3', name:'Da sopra: sfilo il bacino e kimura', video:'verde_13_4.mp4', desc:'Aggressore è in mezzo alle gambe. Le sue gambe sono in mezzo alle ns, apro le sue mani (pollice interno), sfilo lateralmente bacino (se ho bloccato con mano sx, spinge la gamba dx esce cresta iliaca dx), colpisco con l\'altro avambraccio collo/mandibola e kimura.' },
+        { n:'4', name:'Da sopra: sfilo il bacino e sforbiciata', video:'verde_13_5.mp4', desc:'Sfilo lateralmente bacino e con sforbiciata faccio cadere aggressore (o colpisco alla testa o sotto l\'ascella).' }
       ]},
       { title:'Difese da strangolamento a terra laterali', items:[
         { n:'1', name:'Juji gatame', video:'verde_14_1.mp4', desc:'Se aggressore è sul mio lato destro, blocco la sua mano destra (mano a cucchiaio) con la mia sx. Con la mano dx punta delle dita nella fossetta sovrasternale, porto la gamba più vicina all\'aggressore sul suo petto, con l\'altra aggancio la testa e porto in leva (arm lock). La sua testa deve finire il più possibile vicina al mio gluteo.' },
@@ -386,11 +397,10 @@ const BELTS = [
         { n:'4', name:'Immobilizzazione da judo', video:'verde_14_4.mp4', desc:'L\'aggressore esegue l\'immobilizzazione da Judo. Leva sulla spina del naso, ruoto e mi libero.' }
       ]},
       { title:'Difesa da accantonamento al muro', items:[
-        { n:'1', name:'Applicazione colpo con punta delle dita', video:'verde_15_1.mp4', desc:'Colpisci con punta delle dita alla fossetta sovrasternale con la mano dx, pesta con piede dx il suo piede dx, quindi passa avanti uscendo in diagonale.' }
+        { n:'1', name:'Applicazione colpo con punta delle dita', video:'verde_15_1.mp4', desc:'Colpisco con punta delle dita alla fossetta sovrasternale con la mano dx, pesto con piede dx il suo piede dx, quindi passo avanti uscendo in diagonale.' }
       ]},
       { title:'Esame', items:[
-        { n:'', name:'Combattimento a contatto pieno', video:'', desc:'3 round da 2 minuti - 1 minuto di recupero.' },
-        { n:'', name:'Programma esame', video:'', desc:'Tutte le sezioni del programma cintura verde: cadute, calci, difese da calci circolari (alto e medio), difese da prese al corpo (davanti, dietro, laterale), studio leve alla spalla, difesa da presa ai capelli, difese da polsi a terra, difese da strangolamento a terra, difesa da strangolamento a terra laterale, difesa da accantonamento al muro.' }
+        { n:'', name:'Combattimento a contatto pieno — 3 round da 2 minuti — 1 minuto di recupero', video:'', desc:'3 round da 2 minuti a contatto pieno con 1 minuto di recupero tra i round.' }
       ]}
     ],
     tips:['OBIETTIVO: uscire dalla linea di fuoco e tenere il controllo']
@@ -399,89 +409,88 @@ const BELTS = [
     id:'blu', name:'Cintura Blu', color:'#1a5fb4',
     sections:[
       { title:'Cadute', items:[
-        { n:'1', name:'Caduta in avanti dura', video:'blu_1_1.mp4', desc:'Reazione a potenziale esplosione. Buttati per terra atterrando con gli avambracci. Ruota la testa lateralmente. Corpo rigido, posizione di plank.' },
-        { n:'2', name:'Caduta laterale con ostacolo', video:'blu_1_2.mp4', desc:'Caduta laterale con ostacolo presente.' },
-        { n:'3', name:'Caduta indietro ruotando', video:'blu_1_3.mp4', desc:'Rotazione con ammortizzamento sulle braccia.' }
+        { n:'1', name:'Caduta in avanti dura', video:'blu_1_1.mp4', desc:'Reazione a potenziale esplosione. Mi butto per terra atterrando con avambracci. Ruottare la testa lateralmente. Corpo rigido, posizione di plank.' },
+        { n:'2', name:'Caduta laterale con ostacolo', video:'blu_1_2.mp4', desc:'' },
+        { n:'3', name:'Caduta indietro ruotando e ammortizzato sulle braccia', video:'blu_1_3.mp4', desc:'' }
       ]},
       { title:'Proiezioni', items:[
-        { n:'1', name:'Spazzata di base (o soto gari)', video:'blu_2_1.mp4', desc:'Colpo al viso con mano aperta, afferra sua spalla omolaterale. Allinea il piede esterno con suo piede, carica e colpisci con il polpaccio il suo polpaccio, spingendo con la mano la spalla. Dai gomitata al mento prima di afferrare la spalla per fargli inarcare la schiena. Immobilizza a terra.' },
+        { n:'1', name:'Spazzata di base (o soto gari)', video:'blu_2_1.mp4', desc:'Colpo al viso con mano aperta, afferro sua spalla omolaterale (con mia mano dx afferro sua spalla dx), allineo mio piede esterno (in questo caso sx) con suo piede dx, carico e colpisco con mio polpaccio suo polpaccio, spingendo con mano sua spalla. NB: mentre stai per afferrare la spalla dai gomitata al mento/spingilo verso l\'alto (in modo da fargli inarcare la schiena); una volta a terra immobilizzare.' },
         { n:'2', name:'Spazzata frontale (ashi barai)', video:'blu_2_2.mp4', desc:'In combattimento, spazzata con gamba davanti sia interna che esterna.' },
-        { n:'3', name:'Proiezione autocaduta all\'indietro (Tomoe nage)', video:'blu_2_3.mp4', desc:'Su spinta alla maglia indietreggia sfruttando la sua spinta, afferra le sue braccia o maglietta, buttati a terra con caduta all\'indietro, caricalo su una gamba posizionando il piede su suo corpo (inguine o pancia) e spingilo oltre la tua testa. Proiezione laterale è corretta.' },
-        { n:'4', name:'Sbilanciamento "da discoteca"', video:'blu_2_4.mp4', desc:'Piede omolaterale aggancia la caviglia dell\'aggressore, esegui pressione con il ginocchio su suo ginocchio.' }
+        { n:'3', name:'Proiezione in autocaduta all\'indietro (Tomoe nage)', video:'blu_2_3.mp4', desc:'Su spinta alla maglia indietreggio sfruttando sua spinta, afferro sue braccia o sua maglietta, mi butto a terra facendo caduta all\'indietro, lo carico su mia gamba posizionando il piede che non fa da appoggio su suo corpo (inguine o panica, in basso sul lato), e lo spingo oltre la mia testa. E\' corretto fare la proiezione laterale.' },
+        { n:'4', name:'Sbilanciamento "da discoteca"', video:'blu_2_4.mp4', desc:'Piede omolaterale aggancia caviglia aggressore, eseguo pressione con il ginocchio su suo ginocchio (meglio se riesco anche a spingere con spalla).' }
       ]},
       { title:'Difesa da tentativo di strangolamento (Koshi guruma)', items:[
-        { n:'1', name:'Con presa al collo', video:'blu_3_1.mp4', desc:'Apri con due mani da interno, con sx afferra sua dx e con dx colpisci suo collo avvolgendolo. Girando rimanendo interno e dandogli le spalle, i piedi all\'interno dei suoi. Durante la rotazione abbassati. Carica con bacino lateralmente e ruota sollevando le gambe ("squat"). Proiezione a terra.' },
-        { n:'2', name:'Con presa al busto', video:'blu_3_2.mp4', desc:'Apri dall\'interno. Con sx afferra sua dx, colpo allo stomaco, poi avvolgi il suo busto con il braccio destro avvicinandoti e ruotando. Nella rotazione abbassati, una volta stabilito il contatto proiettalo sollevandolo, sfruttando la forza delle gambe.' },
-        { n:'3', name:'Con presa su stesso braccio', video:'blu_3_3.mp4', desc:'Apri internamente, gomitata allo stomaco, una mano afferra il polso, il braccio omolaterale va sotto l\'ascella. Appoggia la schiena su sua pancia abbassandoti. Proietta sollevandoti e ruotando il busto. Tieni sempre il braccio dell\'aggressore. Immobilizza.' }
+        { n:'1', name:'Con presa al collo', video:'blu_3_1.mp4', desc:'Apro con due mani da interno, con sx afferro sua dx e con dx colpisco suo collo avvolgendolo. Contemporaneamente mi giro rimanendo interna e dandogli le spalle, i miei piedi devono rimanere all\'interno dei suoi ed il mio braccio rimane avvolto al suo collo; durante la rotazione mi devo abbassare. Carico con bacino (lateralmente) e ruoto, risollevando le gambe ("squat"). Proiezione a terra.' },
+        { n:'2', name:'Con presa al busto', video:'blu_3_2.mp4', desc:'Inizio sempre uguale, aprendo dall\'interno. Con sx aferro sua ds, colpo allo stomaco, poi avvolgo suo busto con mio braccio destro, avvicinandomi e ruotando in modo da posizionarmi davanti di schiena, per caricarlo. Nella rotazione mi abbasso, una volta stabilito il contatto lo proietto sollevandolo, sfruttando la forza delle mie gambe ed effettuando solita torsione del busto.' },
+        { n:'3', name:'Con presa con entrambe le mani allo stesso braccio', video:'blu_3_3.mp4', desc:'Apro internamente, gomitata allo stomaco o pugno sul bicipite (plesso-brachiale), una mano afferra il polso, mentre il braccio omolaterale va sotto l\'ascella. Appoggio mia schiena su sua pancia, abbassandomi. Una volta stabilito il contatto lo proietto sollevandomi e ruotando il busto. Tengo sempre il braccio dell\'aggressore mentre lo butto a terra. Immobilizzo.' }
       ]},
       { title:'Difesa da strangolamento con o soto gari', items:[
-        { n:'1', name:'Mano su fossetta sovrasternale', video:'blu_4_1.mp4', desc:'Come la tecnica 14 del programma gialla, la mano sulla fossetta sovrasternale e avanza con la stessa gamba. A differenza della gialla avanzi, non indietreggi.' },
-        { n:'2', name:'Manata al mento', video:'blu_4_2.mp4', desc:'Come la tecnica 14 del programma gialla, la mano sul mento e spingi. Non va fatta proiezione.' }
+        { n:'1', name:'Mano su fossetta sovrasternale', video:'blu_4_1.mp4', desc:'Come 14 programma gialla, la mano sulla fossetta sovrasternale e avanzo con la stessa gamba. A differenza della gialla avanzo, non indietreggio.' },
+        { n:'2', name:'Manata al mento', video:'blu_4_2.mp4', desc:'Come 14 programma gialla, la mano sul mento e spingo. Non va fatta proiezione.' }
       ]},
       { title:'Difese da pugno laterale', items:[
-        { n:'1', name:'Difesa da pugno laterale sx', video:'blu_5_1.mp4', desc:'Gamba dx in avanti, braccio sx in rotazione para (parata da seconda guardia n.6), con l\'altro contrattacca.' },
-        { n:'2', name:'Difesa da pugno laterale dx', video:'blu_5_2.mp4', desc:'Come sopra ma sarai esterno.' }
+        { n:'1', name:'Difesa da pugno laterale sx', video:'blu_5_1.mp4', desc:'Gamba dx in avanti, braccio sx in rotazione paro (parata da seconda guardia n.6) con l\'altro contrattacco.' },
+        { n:'2', name:'Difesa da pugno laterale dx', video:'blu_5_2.mp4', desc:'Come sopra ma sarò esterno.' }
       ]},
       { title:'Difese da calcio laterale medio', items:[
-        { n:'1', name:'Attacco frontale', video:'blu_6_1.mp4', desc:'Avanza esterno, parata con braccio ad imbuto, colpisci con gambe o pugni.' },
-        { n:'2', name:'Attacco laterale', video:'blu_6_2.mp4', desc:'Colpisci con il braccio da esterno ad interno (devi deviare), rotazione del busto, calcio al perineo. Para sempre con il braccio dietro.' }
+        { n:'1', name:'Attacco frontale', video:'blu_6_1.mp4', desc:'Avanzo estero, parata con braccio ad imbuto, colpisco o con gambe o con pugni.' },
+        { n:'2', name:'Attacco laterale', video:'blu_6_2.mp4', desc:'Colpisco con mio braccio da esterno ad interno (devo deviare)/ rotazione del busto, calcio al perineo. Paro sempre con il mio braccio dietro.' }
       ]},
       { title:'Studio del cavaliere', items:[
-        { n:'1', name:'Verso l\'alto', video:'blu_7_1.mp4', desc:'Colpisci sempre con un calcio prima del cavaliere. Usa il peso del corpo. Tieni il suo polso con la sx, con la dx spingi sulle nocche e "scava" nel suo pugno quando allenta la presa per estrarre il coltello.' },
-        { n:'2', name:'Normale', video:'blu_7_2.mp4', desc:'Tecnica standard del cavaliere.' },
-        { n:'3', name:'Verso il basso', video:'blu_7_3.mp4', desc:'Cavaliere verso il basso.' }
+        { n:'1', name:'Verso l\'alto', video:'blu_7_1.mp4', desc:'Colpire sempre con un calcio prima del cavaliere. Usare il peso del corpo. Tengo il suo polso con mia sx, con dx spingo sulle nocche e "scavo" nel suo pugno quando allenta la presa per estrarre il coltello.' },
+        { n:'2', name:'Normale', video:'blu_7_2.mp4', desc:'Colpire sempre con un calcio prima del cavaliere. Usare il peso del corpo. Tengo il suo polso con mia sx, con dx spingo sulle nocche e "scavo" nel suo pugno quando allenta la presa per estrarre il coltello.' },
+        { n:'3', name:'Verso il basso', video:'blu_7_3.mp4', desc:'Colpire sempre con un calcio prima del cavaliere. Usare il peso del corpo. Tengo il suo polso con mia sx, con dx spingo sulle nocche e "scavo" nel suo pugno quando allenta la presa per estrarre il coltello.' }
       ]},
       { title:'Difesa da minaccia con coltello', items:[
         { n:'1', name:'Minaccia frontale', video:'blu_8_1.mp4', desc:'Mani in segno di resa. Se minaccia con mano dx, sposta con la mano dx e calcio con dx.' },
-        { n:'2A', name:'Coltello alla gola - lato prono', video:'blu_8_2.mp4', desc:'Come da difesa da presa alla maglia: afferra sua mano con coltello con mano speculare bloccandola sul petto (mano a pappagallo). Contemporaneamente colpo al viso, afferra la spalla, ginocchiate, raddoppia su coltello e fai leva n.4 (Kote Gaeshi). Porta a terra e immobilizza.' },
-        { n:'2B', name:'Coltello alla gola - lato supino', video:'blu_8_3.mp4', desc:'Con mano OPPOSTA a quella dell\'aggressore afferra la sua mano armata e spingila verso il basso, ruotando il busto. Con il braccio più distante colpisci il viso e torna sul coltello, raddoppia la presa, leva 4.' },
-        { n:'3A', name:'Coltello alla gola centrale - una mano', video:'blu_8_4.mp4', desc:'Con mano speculare afferra la sua mano con coltello e spingi verso il basso avvicinandoti lateralmente, colpi al viso.' },
-        { n:'3B', name:'Coltello alla gola centrale - due mani', video:'blu_8_5.mp4', desc:'Afferra con due mani la mano con coltello e bloccala sul petto tirando indietro la testa. Contemporaneamente calcio o ginocchiata (movimento a pendolo).' },
-        { n:'4A', name:'Da dietro alla schiena - interna', video:'blu_8_6.mp4', desc:'Ruota internamente rimanendo a contatto con il braccio dell\'aggressore. Con il braccio passa sopra al suo e immobilizza avvicinandoti. Contemporaneamente colpo al volto, afferra la spalla, ginocchiate tenendo sempre focus sul coltello. Quando è ammorbidito fai leva e porta a terra.' },
-        { n:'4B', name:'Da dietro alla schiena - esterna', video:'blu_8_7.mp4', desc:'Ruota esternamente, aggancia suo braccio mantenendo il controllo del coltello, colpisci il collo da dietro, afferra testa e falla ruotare dal lato opposto al tuo, mantieni la sua schiena inarcata e il suo braccio teso.' },
-        { n:'5', name:'Da dietro alla gola', video:'blu_8_8.mp4', desc:'Come da difesa da strangolamento con avambraccio. Afferra coltello con due mani (stabilizza il baricentro, gira un po\' il bacino per creare spazio) e colpisci con mano interna i testicoli ripetutamente. Ruota internamente ed esci dal suo braccio, dai ginocchiata. Tieni sempre il coltello aderente al petto. Leva al polso/disarmo/porta a terra.' },
-        { n:'6 prona', name:'A terra - mano prona', video:'blu_8_9.mp4', desc:'Con mano speculare afferra coltello e contemporaneamente colpisci al viso con altra mano, raddoppia sul coltello. Immobilizza la mano, colpisci il viso. Con la gamba dai spinta alla gamba di appoggio e ruota piegando il ginocchio per farlo andare in leva. MORDI la mano per disarmare.' },
-        { n:'6 supina', name:'A terra - mano supina', video:'blu_8_10.mp4', desc:'Afferra il coltello con entrambe le mani e portalo dal lato opposto del braccio. A) Tieni il coltello al petto e ruota il busto, calcio sulla gamba di appoggio, aggancia il collo e porta il braccio in leva. MORDI per disarmare. B) Spingi il coltello fino a terra, appoggia di peso il corpo per tenerlo fermo.' }
+        { n:'2A', name:'Coltello alla gola SUL LATO: mano prona', video:'blu_8_2.mp4', desc:'Come da difesa da presa alla maglia afferro sua mano con coltello con mia mano speculare, bloccandola sul mio petto (mano a pappagallo). Contemporaneamente colpo al viso, afferro la spalla, ginocchiate, raddoppio con altra mano su coltello e faccio leva n. 4 (Kote Gaeshi); porto a terra e immobilizzo.' },
+        { n:'2B', name:'Coltello alla gola SUL LATO: mano supina', video:'blu_8_3.mp4', desc:'Con mano OPPOSTA a quella con cui l\'aggressore tiene il coltello afferro sua mano armata e la spingo verso il basso, ruotando il mio busto e mantenendo contatto con il mio fianco. Contemporaneamente con il braccio più distante colpisco il viso e torno immediatamente sul coltello, raddoppiando la presa, leva 4.' },
+        { n:'3A', name:'Coltello alla gola centrale: difesa con una mano', video:'blu_8_4.mp4', desc:'Come per 2 B, con mano speculare afferro sua mano con coltello e spingo verso il basso avvicinandomi lateralmente, colpi al viso etc.' },
+        { n:'3B', name:'Coltello alla gola centrale: difesa con due mani', video:'blu_8_5.mp4', desc:'Alternativa: afferro con due mani la mano che tiene il coltello e lo blocco sul mio petto, tirando indietro la testa. Contemporaneamente calcio o ginocchiata (movimento a pendolo).' },
+        { n:'4A', name:'Da dietro alla schiena: interna', video:'blu_8_6.mp4', desc:'Ruoto internamente rimanendo a contatto con il braccio dell\'aggressore, con braccio passo sopra al suo e immobilizzo avvicinandomi (come da presa ai capelli), contemporaneamente colpo al volto, afferro la spalla, ginocchiate tenendo sempre focus sul coltello, quando è ammorbidito faccio leva e porto a terra.' },
+        { n:'4B', name:'Da dietro alla schiena: esterna', video:'blu_8_7.mp4', desc:'Ruoto esternamente, aggancio suo braccio dx con dx mantenendo il controllo del coltello, colpisco il collo da dietro, afferro testa e la faccio ruotare dal lato opposto al mio, mantenendo sua schiena inarcata e il suo braccio dx teso; posiziono la mano dietro mia schiena.' },
+        { n:'5', name:'Da dietro alla gola', video:'blu_8_8.mp4', desc:'Come da difesa da strangolamento con avambraccio, afferro coltello con due mani (stabilizzando mio baricentro con leggera flessione delle ginocchia, e girando un po\' il bacino per creare spazio per colpire i testicoli) e colpisco con mano interna suoi testicoli ripetutamente. Ruoto internamente ed esco dal suo braccio (tagliando il suo fianco), do ginocchiata. Devo sempre tenere il coltello completamente aderente al mio petto. Leva al polso con il coltello/disarmo/porto a terra.' },
+        { n:'6 prona', name:'A terra (mano prona) / Aggressore tra le gambe', video:'blu_8_9.mp4', desc:'Come da difesa minaccia con coltello alla gola A, con mano speculare afferro coltello e contemporaneamente colpisco al viso con altra mano, che va subito a raddoppiare mano sul coltello; se aggressore ha coltello nella sua dx, io immobilizzo sua mano con mia sx, e con mia dx colpisco il viso. Porto anche dx sul coltello, con mia gamba dx do spinta a sua gamba sx con cui è appoggiato e contemporaneamente ruoto piegando il ginocchio in modo che vada a fare leva sul suo braccio con coltello, che sarà steso avendo allontanato sua gamba; MORDO la mano con il coltello per disarmare, tenendo sempre focus sul coltello, che deve sempre rimanere distante dal tuo viso.' },
+        { n:'6 supina', name:'A terra (mano supina) / Aggressore tra le gambe', video:'blu_8_10.mp4', desc:'Come da difesa minaccia con coltello alla gola B, afferro il coltello con entrambe le mani e lo porto dal lato opposto del braccio con cui minaccia, utilizzando il peso del mio corpo. Due tipologie di uscite: A) tengo il coltello appoggiato al mio petto (tenendolo distante dalla mia gola) e ruoto il busto, calcio sulla gamba di appoggio dal lato in cui ho il coltello alla gola, aggancio con mia gamba del lato opposto suo collo passando da sopra e tirando il braccio in modo che vada in leva. MORDO mano con il coltello per disarmare. B) con il primo movimento spingo con entrambe le mani il coltello fino a farlo arrivare a terra. Appoggio di peso il mio corpo sul coltello per tenerlo fermo, simultaneamente colpo alla gamba dalla parte del coltello e proseguo come A.' }
       ]},
       { title:'Difesa da coltellata', items:[
-        { n:'1A', name:'Rompighiaccio - uscita A', video:'blu_9_1.mp4', desc:'Aggressore attacca con dx: con avambraccio sx blocca suo braccio con coltello, mantieni contatto spingendo, scivola con mano aperta fino ad arrivare al polso. Contemporaneamente colpo al viso con dx e afferra la spalla. Parti con ginocchiate, poi raddoppia la presa afferrando le nocche, calcio e disarma con cavaliere.' },
-        { n:'1B', name:'Rompighiaccio - uscita B', video:'blu_9_2.mp4', desc:'Leggera rotazione interna: avanza ruotando verso il braccio che ti aggredisce. La gamba con cui avanzi è dello stesso lato del braccio con cui vieni aggredito.' },
-        { n:'2', name:'Da basso vs alto', video:'blu_9_3.mp4', desc:'Parata 6, afferra suo braccio con coltello e tira ginocchiate. Non mollare mai il braccio. Devi avere il controllo sull\'avambraccio. Usa il peso del corpo. Dopo 3/4 ginocchiate porta in leva e a terra. Disarma con cavaliere o con leva.' },
-        { n:'3', name:'Stilettata', video:'blu_9_4.mp4', desc:'Da posizione naturale. Esci esternamente, colpendo con avambraccio speculare il suo avambraccio dall\'alto verso il basso. Mantieni il contatto, scivola verso il braccio fino ad arrivare al polso, afferra e contemporaneamente dai un pugno al viso. Raddoppia la presa e fai leva 4.' },
-        { n:'4', name:'Marsigliese', video:'blu_9_5.mp4', desc:'Arretra per schivare e avanza con passo, un solo colpo (tanti colpi = errore), raddoppia la presa, calcio e leva (koto goeshi).' }
+        { n:'1A', name:'Rompighiaccio (da alto vs basso) — uscita A', video:'blu_9_1.mp4', desc:'Aggressore attacca con sua dx: con mio avambraccio sx blocco suo braccio con coltello, dopo averlo bloccato mantengo il contatto spingendo, scivolando con mano aperta (devo continuare a pingere per non permettergli di ricaricare) fino ad arriare al suo polso. Contemporaneamente a questo movimento do con mia dx colpo al viso e afferro sua spalla. Quando ho il controllo del coltello parto con ginocchiate. Quando è ammorbidito riporto il coltello davanti a me, raddoppio la presa afferrando le sue nocche e do un calcio (la gamba con cui calcio la scelgo in funzione di come è messo l\'aggressore), e lo disarmo con cavaliere. Una volta che ho io il coltello colpisco al viso con manico.' },
+        { n:'1B', name:'Rompighiaccio (da alto vs basso) — uscita B', video:'blu_9_2.mp4', desc:'Leggera rotazione interna: avanzo ruotando verso il braccio che mi agredisce. La gamba con cui avanzo sarà dello stesso lato del braccio con cui vengo aggredito (es aggressore impugna coltello con dx, avanzo con gamba dx).' },
+        { n:'2', name:'Da basso vs alto', video:'blu_9_3.mp4', desc:'Parata 6, afferro suo braccio con coltello e tiro ginocchiate finchè non è ammorbidito. ND: non ho mai mollato il braccio con coltello. Dvo avere il controllo su suo avambraccio, stando non troppo vinico alla lama né al gomito. Uso il peso del corpo per mantenere il controllo. Dopo 3/4 ginocchiate lo tengo in lea e lo porto a terra. Disarmo con cavaliere o con leva.' },
+        { n:'3', name:'Stilettata', video:'blu_9_4.mp4', desc:'Da posizione naturale, attacco arriva da davanti. Esco esterna, colpendo con mio avambraccio speculare il suo avambraccio (mio movimento dall\'alto verso il basso). Come da rompighiaccio devo mantenere il contatto, scivolando verso il braccio e spostandomi in modo da arrivare al suo polso con mia mano, afferro e contemporaneamente con mio braccio esterno do un pugno al viso. Raddoppio presa e faccio leva 4.' },
+        { n:'4', name:'Marsigliese (il colpo è verso il viso)', video:'blu_9_5.mp4', desc:'Arretro per schivare e avanzo con passo, un solo colpo (tanti colpi = errorone), raddoppio la presa, calcio (perché ho 4 punti d\'appoggio) e leva (koto goeshi).' }
       ]},
       { title:'Difesa da pugni a terra', items:[
-        { n:'1', name:'Da posizione supina', video:'blu_10_1.mp4', desc:'Aggressore sopra (gambe chiuse), aggredisce con pugni: chiuditi e schiva. Con mano dx afferra sua spalla dx e con sx colpisci al suo busto (rene) e fai ponte girandoti, facendo leva su suo braccio.' }
+        { n:'1', name:'Da posizione supina', video:'blu_10_1.mp4', desc:'Aggressore sopra di me (mie gambe chiuse), mi aggredisce con pugni: mi chiudo e schivo, con mia mano dx afferro sua spalla dx e con mia sx colpi a suo busto (rene) e faccio ponte girandomi, facendo leva su suo braccio.' }
       ]},
       { title:'Difesa da bastone', items:[
-        { n:'1', name:'Bastonata alta - imbuto interno', video:'blu_11_1.mp4', desc:'Bastonata dall\'alto a una mano. Braccio dal lato dell\'attacco ad "imbuto" per far scivolare il bastone - testa sotto al braccio. Contemporaneamente colpisci al viso avanzando. Abbraccia il bastone passando dall\'alto, afferra la spalla e dai ginocchiate. Una volta con entrambe le mani sul bastone ruota il bacino per fargli mollare la presa. Dai tre bastonate.' },
-        { n:'2', name:'Bastonata alta - imbuto interno 2', video:'blu_11_2.mp4', desc:'Come la 1 ma successivamente scivola su suo braccio mantenendo il controllo. Afferra la punta del bastone con palmo verso l\'alto e disarma con movimento del bacino. Con parte corta del bastone colpo al viso, poi strangolamento (bastone dietro al collo). Calcio dietro al ginocchio.' },
-        { n:'3', name:'Bastonata alta a 2 mani dall\'alto', video:'blu_11_3.mp4', desc:'Avversario impugna a 2 mani: avvicinati con braccia ad imbuto a 2 mani e testa tra le braccia. Blocca con entrambe le mani prima che ricarichi: A) tieni con la mano più vicina e colpisci con l\'altra. B) come A + ginocchiata alle mani. C) blocca con la mano più lontana e colpisci con l\'avambraccio alla mandibola esterna.' },
-        { n:'4A', name:'Bastonata laterale - leva al gomito', video:'blu_11_4.mp4', desc:'Avanza diagonalmente con parata in seconda guardia, gomiti che si toccano. Afferra le braccia e portale al petto, colpi vari. Leva al gomito: dx sopra al suo gomito dx e raddoppia con sx, porta a terra.' },
-        { n:'4B', name:'Bastonata laterale - leva al petto col bastone', video:'blu_11_5.mp4', desc:'Come 4A ma leva al petto col bastone tirando con entrambe le braccia, porta a terra.' },
-        { n:'5', name:'Bastone vs coltello', video:'blu_11_6.mp4', desc:'Togliti dalla linea di attacco, colpisci il polso armato dell\'aggressore.' }
+        { n:'1', name:'Bastonata alta, imbuto interno', video:'blu_11_1.mp4', desc:'Bastonata dall\'alto ad una mano. Es attacco con dx: posiziono braccio dal lato in cui mi attacca ad "imbuto" (mi bastona con dx io uso sx) per far scivolare il bastone - attenzione a tenere la testa sotto al braccio; contemporaneamente colpisco al viso facendo un passo verso aggressore, con il braccio sx devo "abbracciare il bastone" passando dall\'alto, con dx afferro spalla e do ginocchiate. Tenere sx stretta, non deve riuscire a sfilare il bastone; quando ho entrambe le mani sul bastone (sx avrò l\'avambraccio) ruoto il bacino verso dx per fargli mollare la presa. Una volta mollato afferro il bastone (mano dx lo stava già tenendo) e do tre bastonate.' },
+        { n:'2', name:'Bastonata alta, imbuto interno 2', video:'blu_11_2.mp4', desc:'Bastonata dall\'alto ad una mano. Es attacco con dx: come bastonata 1. Successivamente scivolo su suo braccio mantenendo il controllo del bastone; afferro punta del bastone con dx con palmo verso l\'alto e disarmo sempre con movimento del bacino. Con parte corta del bastone colpo al viso, poi strangolamento (posiziono bastone dietro al suo collo e da davanti ad incrocio afferro il bastone con altro braccio, passando sopra al mio braccio). Calcio dietro al ginocchio.' },
+        { n:'3', name:'Bastonata alta a 2 mani dall\'alto', video:'blu_11_3.mp4', desc:'Avversario impugna a 2 mani: mi avvicino con braccia ad imbuto a 2 mani e testa tra le braccia, oppure con un braccio ad imbuto. L\'avversario prosegue il colpo e io lo blocco con entrambe le mani prima che ricarichi: A) con la mano più vicina tengo e con l\'altra colpisco. B) con la mano più vicina tengo e con l\'altra colpisco, poi ginocchiata alle mani con ginocchio più lontano. C) blocco con la mano più lontana e colpisco con l\'avambraccio alla mandibola esterna da dietro e torsione della testa tenendo il braccio armato in leva.' },
+        { n:'4A', name:'Bastonata laterale 1: leva al gomito', video:'blu_11_4.mp4', desc:'Mentre avanzo diagonalmente parata in seconda guardia con i gomiti che si toccano, impedisco di ricaricare afferrando le braccia e portandole al petto, colpi vari (testata). A) leva al gomito (dx sopra a suo gomito dx e raddoppio con sx, porto a terra).' },
+        { n:'4B', name:'Bastonata laterale 1: leva con bastone petto', video:'blu_11_5.mp4', desc:'Come 4A ma B) leva al petto col bastone tirando con entrambe le braccia porto a terra.' },
+        { n:'5', name:'Bastone vs coltello', video:'blu_11_6.mp4', desc:'Mi tolgo dalla linea di attacco, colpisco il polso armato dell\'aggressore.' }
       ]},
       { title:'Prese avanzate', items:[
-        { n:'1', name:'Presa ai polsi con 2 mani - disarmo in leva', video:'blu_12_1.mp4', desc:'Afferra il polso opposto tenendo il palmo verso l\'alto, afferra con l\'altra mano passando da sotto l\'avambraccio dell\'aggressore, metti in leva.' },
-        { n:'2', name:'Difesa da stretta di mano', video:'blu_12_2.mp4', desc:'Afferra il suo pollice con il tuo pollice.' },
-        { n:'3A', name:'Minaccia da dito - controlaterale', video:'blu_12_3.mp4', desc:'Afferra suo indice tenendo il tuo pollice verso il basso.' },
-        { n:'3B', name:'Minaccia da dito - omolaterale', video:'blu_12_4.mp4', desc:'Da posizione naturale, sali dal basso, afferra suo dito e tira verso il basso indietreggiando.' }
+        { n:'1', name:'Presa a i polsi con 2 mani, disarmo in leva', video:'blu_12_1.mp4', desc:'Afferro il polso opposto tenendo il palmo verso l\'alto, ed afferro con l\'altra mano passando da sotto l\'avambraccio dell\'aggressore, metto in leva.' },
+        { n:'2', name:'Difesa da stretta di mano', video:'blu_12_2.mp4', desc:'Afferro suo pollice con il mio pollice.' },
+        { n:'3A', name:'Minaccia da dito: controlaterale', video:'blu_12_3.mp4', desc:'A) controlaterale: afferro suo indice (tenendo il mio pollice verso il basso).' },
+        { n:'3B', name:'Minaccia da dito: omolaterale', video:'blu_12_4.mp4', desc:'B) omolaterale: da posizione naturale, salgo dal basso, afferro suo dito e tiro verso il basso indietreggiando.' }
       ]},
       { title:'Difesa da presa da dietro tipo Nelson', items:[
-        { n:'1', name:'Tentativo di Nelson', video:'blu_13_1.mp4', desc:'Quando sta tentando di afferrarti ma ha ancora gli avambracci sui tuoi fianchi, immobilizza stringendo le braccia, colpi alle tibie e pestoni. Con dx afferra suo polso sx (palmo verso l\'alto), con sx afferra le sue dita (pollice in giù) e rompile verso l\'esterno, ruota strisciando il gomito su suo sterno e portalo a terra con le sue dita. Immobilizza.' },
-        { n:'2', name:'Nelson chiusa', video:'blu_13_2.mp4', desc:'Afferra i suoi pollici con le dita (mano a pappagallo) e fai leva. Una volta liberato dalla presa mantieni in leva una delle sue due mani e con l\'altra colpisci.' },
-        { n:'3', name:'Nelson chiusa 2', video:'blu_13_3.mp4', desc:'Porta la gamba dx dietro di lui, autocaduta ruotando.' }
+        { n:'1', name:'Tentativo di Nelson', video:'blu_13_1.mp4', desc:'Quando sta tentando di afferrarmi ma ha ancora i suoi avambracci su miei fianchi immobilizzo stringendo mie braccia, colpi alle sue tibie e pestoni; con mia dx afferro suo polso sx tenendo il mio palmo verso l\'alto, con sx afferro sue dita tenendo il pollice in giù, e le rompo verso l\'esterno (mia mano con il pollice in su), ruoto strisciando il mio gomito su suo sterno e lo porto a terra usando le sue dita, immobilizzo.' },
+        { n:'2', name:'Nelson chiusa', video:'blu_13_2.mp4', desc:'Afferro suoi pollici con mie dita con mano a pappagallo e faccio leva (li devo tenere aderenti alle sue nocche), una volta liberato dalla presa mantengo in leva una delle sue due mani (con mia dx sua dx) e con altra colpisco.' },
+        { n:'3', name:'Nelson chiusa 2', video:'blu_13_3.mp4', desc:'Porto la mia gamba dx dietro di lui, autocaduta ruotando.' }
       ]},
       { title:'Difesa da presa alla maglia', items:[
-        { n:'1', name:'Da davanti con due mani A', video:'blu_14_1.mp4', desc:'Afferra sua mano dx con la tua dx passando da sopra, contemporaneamente calcio ai testicoli, ruota il busto verso la tua dx e stacca la sua presa, waki gatame.' },
-        { n:'2', name:'Da davanti con due mani B', video:'blu_14_2.mp4', desc:'Afferra sua mano con la tua mano controlaterale, calcio ai testicoli, con il braccio dx afferra il gomito e tiralo verso il lato opposto, molla la presa sull\'altra mano e colpisci col palmo il viso girandoglielo. Devi arrivare con l\'avambraccio sulla sua trachea.' },
-        { n:'3', name:'Da davanti con due mani C', video:'blu_14_3.mp4', desc:'Afferra sua mano con mano speculare, pugno sul plesso brachiale, aggancia il suo braccio e proietta (proiezione con entrambe le mani sotto lo stesso braccio).' },
-        { n:'4', name:'Da dietro A', video:'blu_14_4.mp4', desc:'Ruota internamente, con braccio sopra al suo immobilizzalo avvicinandoti. Contemporaneamente colpisci il volto, afferra la spalla, ginocchiate, leva verso l\'alto.' },
-        { n:'5', name:'Da dietro B', video:'blu_14_5.mp4', desc:'Ruota esternamente, colpo al viso con braccio esterno. Con braccio omolaterale afferra da sopra il suo braccio e bloccalo sotto l\'ascella, leva al gomito verso il basso, porta a terra.' }
+        { n:'1', name:'Da davanti con due mani A', video:'blu_14_1.mp4', desc:'Afferro sua mano dx con mia dx passando da sopra, contemporaneamente calcio ai testicoli, ruoto busto verso mia dx e stacco sua presa, waki gatame.' },
+        { n:'2', name:'Da davanti con due mani B', video:'blu_14_2.mp4', desc:'AFFERRO sua mano con mia mano controlaterale, do calcio ai testicoli, con braccio dx afferro gomito e lo tiro verso il lato opposto, mollo la presa sull\'altra sua mano e colpisco col palmo il viso girangoglielo, devo arrivare con il mio avambraccio sulla sua trachea.' },
+        { n:'3', name:'Da davanti con due mani C', video:'blu_14_3.mp4', desc:'Afferro sua mano con mano speculare, pugno sul plesso bracchiale, aggancio suo braccio e proietto (proiezione con entrambe le mani sotto lo stesso rbaccio).' },
+        { n:'4', name:'Da dietro A', video:'blu_14_4.mp4', desc:'Aggressore mi afferra con una mano, come da presa ai capelli, o minaccia da coltello, ruoto internamente, con braccio sopra al suo e lo immobilizzo avvicinandomi. Contemporaneamente colpisco il volto, afferro la spalla, ginocchiate, leva verso l\'alto.' },
+        { n:'5', name:'Da dietro B', video:'blu_14_5.mp4', desc:'Ruoto esternamente, ruotando colpo al viso con braccio esterno, con braccio omolaterale affero da sopra suo braccio che aggredisce e lo blocco sotto l\'ascella, leva al gomito verso il basso, porto a terra.' }
       ]},
       { title:'Esame', items:[
-        { n:'', name:'Combattimento a contatto pieno', video:'', desc:'2 round da 3 minuti - 1 minuto di recupero.' },
-        { n:'', name:'Programma esame', video:'', desc:'Tutte le sezioni del programma cintura blu: cadute, proiezioni, difesa da strangolamento con koshi guruma, difesa da strangolamento con o soto gari, difese da pugno laterale, difese da calcio laterale medio, studio del cavaliere, difese da minaccia con coltello, difese da coltellata, difesa da pugni a terra, difesa da bastone, prese avanzate, difesa da Nelson, difesa da presa alla maglia.' }
+        { n:'', name:'Combattimento a contatto pieno — 2 round da 3 minuti — 1 minuto di recupero', video:'', desc:'2 round da 3 minuti a contatto pieno con 1 minuto di recupero tra i round.' }
       ]}
     ],
     tips:['Priorità: bloccare il coltello sempre','Usa il peso del corpo per mantenere il controllo','Colpisci sempre con un calcio prima del cavaliere']
@@ -490,70 +499,67 @@ const BELTS = [
     id:'marrone', name:'Cintura Marrone', color:'#7a4a1a',
     sections:[
       { title:'Difesa da pistola', items:[
-        { n:'1', name:'Frontale alla testa', video:'marrone_1_1.mp4', desc:'Afferra la canna con i pollici al castelletto del grilletto, contemporaneamente togliti dalla linea di tiro abbassandoti e distendendo le braccia, calcio ai testicoli con la gamba esterna, passo in avanti facendo leva a 30° tenendo la pistola, sfila tirando verso di te, arma e punta.' },
-        { n:'2', name:'Frontale al petto', video:'marrone_1_2.mp4', desc:'Da posizione naturale difensiva, alza le mani all\'altezza della pistola. Ruota esternamente sul posto afferrando la pistola dal carrello (se possibile farlo scorrere per bloccare il colpo) e spostala verso il basso. Passo in avanti rimanendo esterno all\'avversario e pressione sull\'avambraccio, contemporaneamente pugno al viso. Afferra la pistola dalla culatta passando da sotto stando fuori dalla linea di tiro, ruota per rompere il dito sul grilletto, allontanati, arma e mira.' },
-        { n:'3', name:'Frontale testa - variante', video:'marrone_1_3.mp4', desc:'Con un movimento unico afferra la canna con mano interna, mano esterna va sul polso, ruota la testa per uscire dalla linea di tiro e porta la pistola verso il basso. Con il braccio spingi il suo braccio tenendolo in tensione e sfila la pistola per torsione. DEVI SEMPRE AVERE IL CONTROLLO DELLA LINEA DI TIRO.' },
-        { n:'4', name:'Laterale alla tempia (verso occhio)', video:'marrone_1_4.mp4', desc:'Afferra la canna con la mano più vicina passando dietro e come difesa frontale al petto.' },
-        { n:'5A', name:'Laterale alla tempia (verso nuca) A', video:'marrone_1_5.mp4', desc:'Se alzando le mani il braccio più vicino all\'aggressore va dietro alla pistola, con il braccio più vicino ruota e afferra da sotto, spostati con il volto dalla linea di tiro, blocco al petto con l\'avambraccio, colpisci con mano libera e disarma dalla canna.' },
-        { n:'5B', name:'Laterale alla tempia (verso nuca) B', video:'marrone_1_6.mp4', desc:'Se alzando le mani rimangono entrambe davanti alla pistola, passa da sopra con il braccio mentre ruoti il volto verso la pistola per spostarti dalla linea di tiro.' },
-        { n:'6', name:'Laterale al fianco (verso rene)', video:'marrone_1_7.mp4', desc:'Mezzo passo verso di lui e braccio indietro per spostare la linea di tiro, afferra da sotto e poi come 5.' },
-        { n:'7', name:'Laterale al fianco (verso la pancia)', video:'marrone_1_8.mp4', desc:'Colpetto di braccio avanti, mezzo passo indietro e poi disarmo tipo cavaliere.' },
-        { n:'8', name:'Da dietro alla nuca - braccio teso', video:'marrone_1_9.mp4', desc:'Rotazione veloce interna della testa, afferra da sotto e colpi al viso (maglietta). Importante il blocco al petto della mano armata.' },
-        { n:'9A', name:'Da dietro alla schiena A', video:'marrone_1_10.mp4', desc:'Controlla con che mano tiene la pistola, rotazione veloce interna, afferra da sotto e colpi al viso (maglietta). Importante il blocco al petto della mano armata.' },
-        { n:'9B', name:'Da dietro alla schiena B', video:'marrone_1_11.mp4', desc:'Controlla con che mano tiene la pistola, ruota internamente, passando da sopra immobilizza, colpisci (pugno girando, afferra spalla, testata, ginocchiata, pugno su avambraccio, pugno in faccia).' },
-        { n:'10', name:'Da dietro alla tempia con blocco del collo (mano dx)', video:'marrone_1_12.mp4', desc:'Afferra la canna della pistola da sopra e contemporaneamente la testa va indietro, tira in avanti raddoppiando con mano sx su calcio della pistola, spingi con il sedere indietro e disarma. Una volta disarmato dai una gomitata al corpo, scappa armando e puntando.' },
-        { n:'11', name:'Da dietro alla tempia con mano sul collo (mano sx)', video:'marrone_1_13.mp4', desc:'Con la mano opposta a quella con cui tiene la pistola afferra la canna da sopra, sposta la testa, afferra il tuo polso e ruota, disarma. Nella rotazione spacca il dito.' },
-        { n:'12', name:'A muro', video:'marrone_1_14.mp4', desc:'Mano sx prende la pistola, afferra la canna e spingi verso il basso e allunga braccio dx sulla sua spalla (dritto). Passo avanti con gamba sx, rotazione oraria spingendo con braccio dx sulla sua testa e disarma continuando la rotazione. Colpisci alla testa con la canna.' },
-        { n:'13', name:'Aggressione a terza persona', video:'marrone_1_15.mp4', desc:'Sei alle spalle dell\'aggressore. Disarma passando da sopra. Se aggredisce con dx: mano sx afferra il polso da sopra, mentre la destra (con il pollice verso l\'alto) va ad afferrare la canna. I gomiti rimangono attaccati al corpo.' },
-        { n:'14', name:'A terra', video:'marrone_1_16.mp4', desc:'Afferra con mano sx la canna, la dx passa sopra alle sue braccia e afferra il mio (tipo kimura) bloccando le sue mani all\'altezza dei polsi. Fai rotazione a ponte a sx e controrotazione a dx tenendoti fuori dalla linea di tiro. MORDO.' }
+        { n:'1', name:'Frontale alla testa', video:'marrone_1_1.mp4', desc:'Afferro la canna con i pollici al castelletto del grilletto, contemporaneamente mi tolgo dalla linea di tiro abbassandomi e distendendo le braccia, calcio ai testicoli con la gamba esterna, passo in avanti facendo leva a 30° tenendo la pistola, sfilo tirando verso di me, armo e punto.' },
+        { n:'2', name:'Frontale al petto', video:'marrone_1_2.mp4', desc:'Da posizione naturale difensiva, alzo le mani tenendole all\'altezza della pistola. Ruoto esternamente sul posto afferrando la pistola dal carrello (se possibile farlo scorrere per bloccare il colpo) e spostandola verso il basso (canna a terra lontana dal corpo), passo in avanti rimanendo esterno all\'avversario e pressione sull\'avambraccio, contemporaneamente pugno al viso, afferro la pistola dalla culatta passando da sotto e stando fuori dalla linea di tiro, ruoto per rompere il suo dito sul grilletto mi allontano indietreggiando, armo e miro.' },
+        { n:'3', name:'Frontale testa', video:'marrone_1_3.mp4', desc:'Con un movimento unico afferro la canna della pistola con mano interna, mano esterna rispetto all\'avversario va sul polso, contemporaneamente ruoto la testa per uscire dalla linea di tiro e porto la pistola verso il basso. Con mio braccio spingo suo braccio tenendolo in tensione e sfilo pistola per torsione. DEVO SEMPRE AVERE IL CONTROLLO DELLA LINEA DI TIRO.' },
+        { n:'4', name:'Laterale alla tempia (verso occhio)', video:'marrone_1_4.mp4', desc:'Afferro la canna con la mano più vicina passando dietro e come difesa frontale al petto.' },
+        { n:'5A', name:'Laterale alla tempia A (verso nuca)', video:'marrone_1_5.mp4', desc:'Se alzando le mani il mio braccio più vicino all\'aggressore va dietro alla pistola, con il braccio più vicino ruoto e afferro da sotto, mi sposto con volto dalla linea di tiro, blocco al petto con l\'avambraccio, colpisco con mano libera e disarmo dalla canna.' },
+        { n:'5B', name:'Laterale alla tempia B (verso nuca)', video:'marrone_1_6.mp4', desc:'Se alzando le mani rimangono entrambe davanti alla pistola passo da sopra con il braccio mentre ruoto il volto verso la pistola per spostarmi dalla linea di tiro: afferro con braccio la pistola etc.' },
+        { n:'6', name:'Laterale al fianco C (verso rene)', video:'marrone_1_7.mp4', desc:'Mezzo passo verso di lui e braccio indietro per spostare linea di tiro, afferro da sotto e poi come 5.' },
+        { n:'7', name:'Laterale al fianco B (verso la pancia)', video:'marrone_1_8.mp4', desc:'Colpetto di braccio avanti, mezzo passo indietro e poi disarmo tipo cavaliere.' },
+        { n:'8', name:'Da dietro alla nuca braccio teso', video:'marrone_1_9.mp4', desc:'Rotazione veloce interna della testa, afferro da sotto e colpi al viso (maglietta)(importante il blocco al petto della mano armata).' },
+        { n:'9', name:'Da dietro alla schiena', video:'marrone_1_10.mp4', desc:'Controllo con che mano tiene la pistola, rotazione veloce interna, afferro da sotto e colpi al viso (maglietta)(importante il blocco al petto della mano armata).' },
+        { n:'9B', name:'Da dietro alla schiena 9B', video:'marrone_1_11.mp4', desc:'Controllo con che mano tiene la pistola, ruoto internamente, passando da sopra immobilizzo, colpisco (pugno girando, afferro spalla, testata, ginocchiata, pugno su avabraccio, pugno in faccia).' },
+        { n:'10', name:'Da dietro alla tempia con blocco del collo con avambraccio (mano dx)', video:'marrone_1_12.mp4', desc:'Afferro canna della pistola da sopra e contemporaneamente la testa va indietro, tiro in avanti raddoppiando con mano sx su calcio della pistola, spingo con il sedere indietro e disarmo, una volta disarmato do una gomitata al corpo, scappo armando e puntando.' },
+        { n:'11', name:'Da dietro alla tempia con mano sul collo (mano sx)', video:'marrone_1_13.mp4', desc:'Con la mano opposta di quella con cui tiene la pistola afferro la canna da sopra, sposto la testa, afferro il mio polso e ruoto, disarmo. Nella rotazione spacco il dito.' },
+        { n:'12', name:'A muro', video:'marrone_1_14.mp4', desc:'Mano sx prende la pistola, afferro la canna e spingo verso il basso e allungo braccio dx sulla sua spalla (dritto), passo avanti con gamba sx, rotazione oraria spingendo con braccio dx sulla sua testa e disarmo continuando la rotazione colpisco alla testa con la canna.' },
+        { n:'13', name:'Aggressione a terza persona', video:'marrone_1_15.mp4', desc:'Sono alle spalle dell\'aggressore. Disarmo passando da sopra. Se aggredisce con dx: mano sx afferra il polso da sopra, mentre la destra (con il pollice verso l\'alto) va ad afferrare la canna. I gomiti rimangono attaccati al corpo.' },
+        { n:'14', name:'A terra', video:'marrone_1_16.mp4', desc:'Afferro con mano sx la canna, la dx passa sopra alle sue braccia e afferro il mio (tipo kimura) bloccando le sue mani all\'altezza dei polsi, faccio rotazione a ponte a sx e controrotazione a dx tenendomi fuori dalla linea di tiro. MORDO.' }
       ]},
       { title:'Difese da prese al corpo con proiezione (avanzate)', items:[
-        { n:'1', name:'Con mani libere', video:'marrone_2_1.mp4', desc:'Autocaduta indietro, simile a difesa da Nelson 3. Posiziona la gamba dietro alle sue ad ostacolo.' },
-        { n:'2', name:'Con mani bloccate', video:'marrone_2_2.mp4', desc:'Afferra le sue braccia accucciandoti, proiezione d\'anca cadendogli addosso.' },
-        { n:'3', name:'Difesa da presa in cravatta da davanti', video:'marrone_2_3.mp4', desc:'Colpire con mano aperta ai genitali, inarcare la schiena, tieni una mano sul collo, autocaduta all\'indietro tenendo il suo braccio che è sul collo.' },
-        { n:'4', name:'Difesa da presa in cravatta classica', video:'marrone_2_4.mp4', desc:'Metti la gamba dietro alle sue, con la mano più vicina afferra l\'anca opposta e ruotando autocaduta.' },
-        { n:'5', name:'Presa in cravatta', video:'marrone_2_5.mp4', desc:'Afferra l\'aggressore con presa in cravatta con avambraccio. Esegui la pressione sul menisco mandibolare e cammina in avanti sedendosi per portare a terra l\'avversario.' },
-        { n:'6', name:'Difesa da strangolamento con rincorsa', video:'marrone_2_6.mp4', desc:'Afferra con entrambe le mani il braccio che strangola e proietta in avanti.' }
+        { n:'1', name:'Con mani libere', video:'marrone_2_1.mp4', desc:'Autocaduta indietro, simile a difesa da Nelson 3. Posiziono la gamba dietro alle sue ad ostacolo.' },
+        { n:'2', name:'Con mani bloccate', video:'marrone_2_2.mp4', desc:'Afferro sue braccia accucciandomi, proiezione d\'anca cadendogli addosso.' },
+        { n:'3', name:'Difesa da presa in cravatta da davanti', video:'marrone_2_3.mp4', desc:'Colpire con mano aperta ai genitali, innarcare la schiena, devo tenere una mano sul collo, autocaduta all\'indietro tenendo il suo braccio che è sul mio collo.(autocaduta valida sia che stia subendo, sia che stia eseguendo la tecnica).' },
+        { n:'4', name:'Difesa da presa in cravatta classica', video:'marrone_2_4.mp4', desc:'Metto la mia gamba dietro le sue, con la mano più vicina afferro l\'anca opposta e ruotando auto caduta.' },
+        { n:'5', name:'Presa in cravatta', video:'marrone_2_5.mp4', desc:'Afferro l\'aggressore con presa in cravatta con avambraccio. Eseguire la pressione sul menisco mandibolare e camminare in avanti sedendosi per portare a terra l\'avversario.' },
+        { n:'6', name:'Difesa da strangolamento con avambraccio da dietro con rincorsa', video:'marrone_2_6.mp4', desc:'Afferrare con entrambe le mani il braccio che strangola, e proiettare in avanti.' }
       ]},
       { title:'Tecniche operative', items:[
-        { n:'A', name:'Punti di pressione dolorosi A', video:'marrone_3_1.mp4', desc:'Passa entrambe le mani sotto le sue, mano a pappagallo e appenditi alle clavicole affondando le punte delle dita.' },
-        { n:'B', name:'Punti di pressione dolorosi B', video:'marrone_3_2.mp4', desc:'Infranocca (tra medio e anulare).' },
-        { n:'C', name:'Punti di pressione dolorosi C', video:'marrone_3_3.mp4', desc:'All\'inserzione del pollice sulla mano.' },
-        { n:'D', name:'Punti di pressione dolorosi D', video:'marrone_3_4.mp4', desc:'Nello studio del cavaliere tra radio e tendini.' },
-        { n:'5', name:'Menisco mandibolare', video:'marrone_3_5.mp4', desc:'Esegui la pressione sul menisco mandibolare.' },
-        { n:'6', name:'Difesa da guardia a terra A', video:'marrone_3_6.mp4', desc:'Scavalca con una gamba l\'avversario costringendolo a ruotare in posizione prona, tieni in leva il suo piede (dietro la tua ascella), quindi leva all\'arto inferiore o leva alla caviglia.' },
-        { n:'7', name:'Difesa da guardia a terra B', video:'marrone_3_7.mp4', desc:'La gamba sinistra si flette internamente con l\'avambraccio destro scivoli fino a metà della gamba (sotto al polpaccio), la gamba destra blocca all\'inguine, quindi metti in leva. La leva è sul nervo.' },
-        { n:'8', name:'Difesa da arm bar', video:'marrone_3_8.mp4', desc:'Spostati col corpo in linea con quello dell\'aggressore, quindi capriola indietro (ti trovi in monta), seguono colpi all\'inguine.' },
-        { n:'9', name:'Tecnica di accompagnamento da dietro', video:'marrone_3_9.mp4', desc:'Posizionati dietro all\'aggressore, indice medio e pollice vanno ad afferrare ghiandole sublinguali (segui gli anelli tracheali). Colpo al popliteo e sbilanciamento.' },
-        { n:'10', name:'Finalizzazione proiezione presa in cravatta', video:'marrone_3_10.mp4', desc:'Fai presa in cravatta da davanti, l\'avversario cerca di difendersi. Se tenta di alzarsi, ruota il palmo dall\'alto verso il basso e ruota mantenendo il contatto del bicipite sul suo mento, richiudi il braccio e sei in ginocchio dietro l\'avversario. Chiudi le mani dietro la sua schiena bloccando il suo braccio e alzati.' },
-        { n:'11', name:'Difesa da minaccia da dito', video:'marrone_3_11.mp4', desc:'Colpo con mani contemporaneo a tempia e mandibola.' }
+        { n:'1', name:'Punti di pressione dolorosi A', video:'marrone_3_1.mp4', desc:'Passo entrambe le mani sotto le sue, mano a pappagallo e mi appendo alle sue clavicole e affondo le punte delle dita.' },
+        { n:'2', name:'Punti di pressione dolorosi B', video:'marrone_3_2.mp4', desc:'Infranocca (tra medio e anulare).' },
+        { n:'2', name:'Punti di pressione dolorosi C', video:'marrone_3_3.mp4', desc:'All\'inserzione del pollice sulla mano.' },
+        { n:'3', name:'Punti di pressione dolorosi D', video:'marrone_3_4.mp4', desc:'Nello studio del cavaliere tra radio e tendini.' },
+        { n:'4', name:'Menisco mandibolare', video:'marrone_3_5.mp4', desc:'Eseguire la pressione sul menisco mandibolare.' },
+        { n:'5', name:'Difesa da guardia a terra A', video:'marrone_3_6.mp4', desc:'Scavalcare con una gamba l\'avversario, costringendolo a ruotare in posizione prona, tengo in leva il suo piede (che è dietro la mia ascella) quindi leva all\'arto inferiore o leva alla caviglia se riesco a spostare il mio avambraccio all\'altezza della caviglia.' },
+        { n:'6', name:'Difesa da guardia a terra B', video:'marrone_3_7.mp4', desc:'La gamba sinistra si flette internamente con l\'avambraccio destro scivolo fino a metà della gamba (sotto al polpaccio) la gamba destra blocca all\'inguine, quindi metto in leva. La leva in questo caso è sul nervo.' },
+        { n:'7', name:'Difesa da arm bar', video:'marrone_3_8.mp4', desc:'Mi sposto col corpo in linea con quello dell\'aggressore, quindi capriola indietro (mi trovo in monta), seguono colpi all\'inguine.' },
+        { n:'8', name:'Tecnica di accompagnamento da dietro', video:'marrone_3_9.mp4', desc:'Mi posiziono dietro all\'aggressore, indice medio e pollice vanno ad afferrare ghiandole sublinguali (seguo gli anelli tracheali). Colpo al popliteo e sbilanciamento.' },
+        { n:'9', name:'Finalizzazione proiezione presa in cravatta da davanti', video:'marrone_3_10.mp4', desc:'Faccio presa in cravatta da davanti, l\'avversario cerca di difendersi con tecniche precedenti, io proietto. Se l\'avversario tenta di alzarsi, ruoto il mio palmo dall\'alto verso il basso e ruoto mantenendo il contatto del bicipite sul suo mento, richiudo il braccio e sono in ginocchio dietro l\'avversario, a questo punto chiudo le mie mani dietro la sua schiena bloccando il suo braccio e mi alzo.' },
+        { n:'10', name:'Difesa da minaccia da dito', video:'marrone_3_11.mp4', desc:'Colpo con mani contemporaneo a tempia e mandibola.' }
       ]},
       { title:'Difese da prese al corpo da dietro (avanzate)', items:[
-        { n:'1', name:'Avversario strangola da sopra (quadrupedia)', video:'marrone_4_1.mp4', desc:'Cerca di andare indietro afferrando la sua caviglia e proiettandolo in avanti.' },
-        { n:'2', name:'Avversario strangola da dietro a terra', video:'marrone_4_2.mp4', desc:'Cerca di ruotare la testa nell\'incavo del gomito e con i gomiti esegui pressione interno coscia.' },
-        { n:'3', name:'Avversario strangola da dietro in ginocchio', video:'marrone_4_3.mp4', desc:'Cerca di ruotare la testa nell\'incavo del gomito, ruota nello stesso senso le anche e proietta a terra e combatti.' }
+        { n:'1', name:'Avversario mi strangola da sopra e io sotto in quadrupedia', video:'marrone_4_1.mp4', desc:'Cerco di andare indietro afferrando la sua caviglia e proiettandolo in avanti.' },
+        { n:'2', name:'Avversario mi strangola da dietro a terra', video:'marrone_4_2.mp4', desc:'Cerco di ruotare la testa nell\'incavo del gomito e con i miei gomiti eseguo pressione interno coscia.' },
+        { n:'3', name:'Avversario mi strangola da dietro in ginocchio', video:'marrone_4_3.mp4', desc:'Cerco di ruotare la testa nell\'incavo del gomito ruoto nello stesso senso le anche e proietto a terra e combatto.' }
       ]},
       { title:'Difesa da leva al braccio da dietro', items:[
-        { n:'1', name:'Posizione quadrupedale', video:'marrone_5_1.mp4', desc:'Braccio controlaterale afferra spalla passando sotto ascella. Esegui rotazione tenendo bloccato il braccio più lontano con le gambe e metti in leva l\'aggressore.' },
-        { n:'1A', name:'Se braccio dx bloccato - in piedi', video:'marrone_5_2.mp4', desc:'Infila la gamba sx all\'interno delle gambe dell\'aggressore chinandoti in avanti, quindi controrotazione verso dx eseguendo sforbiciata.' },
-        { n:'1B', name:'Se braccio dx bloccato - quadrupedia', video:'marrone_5_3.mp4', desc:'Come in piedi ma da quadrupedia.' }
+        { n:'1', name:'Se braccio dx bloccato: A) in piedi, B) posizione quadrupedale', video:'marrone_5_1.mp4', desc:'Infilo la mia gamba sx all\'interno delle gambe dell\'aggressore chinandomi in avanti, quindi controrotazione verso dx eseguendo sforbiciata (posso proseguire portando in leva la gamba dell\'aggressore o strangolandolo).' },
+        { n:'2', name:'Capriola in avanti', video:'marrone_5_2.mp4', desc:'' }
       ]},
-      { title:'Difese con mani ammanettate', items:[
-        { n:'1', name:'Calcio ai genitali', video:'marrone_6_1.mp4', desc:'Allarga le sue gambe con i piedi, quindi calcio ai genitali.' },
-        { n:'2', name:'Leva frontale al ginocchio', video:'marrone_6_2.mp4', desc:'Con un piede blocca il tallone, con l\'altro spingi sul ginocchio della gamba omolaterale.' },
-        { n:'3', name:'Sforbiciata al ginocchio', video:'marrone_6_3.mp4', desc:'Con un piede blocca la caviglia, con l\'altro sforbiciata al ginocchio.' }
+      { title:'Difese con mani ammanettate dietro la schiena seduto a terra', items:[
+        { n:'1', name:'Calcio ai genitali', video:'marrone_6_1.mp4', desc:'Allargo le sue gambe con i piedi, quindo calcio ai genitali.' },
+        { n:'2', name:'Leva frontale al ginocchio', video:'marrone_6_2.mp4', desc:'Con un piede blocco tallone, con l\'altro spingo sul ginocchio della gamba omolaterale.' },
+        { n:'3', name:'Sforbiciata al ginocchio', video:'marrone_6_3.mp4', desc:'Con un piede blocco caviglia, con l\'altro sforbiciata al ginocchio.' }
       ]},
       { title:'Difesa da calci a terra', items:[
-        { n:'A', name:'Rotazione nella direzione del calcio', video:'marrone_7_1.mp4', desc:'Mani a protezione del volto, blocca la gamba che ti sta calciando e continua la rotazione nella stessa direzione del calcio, porta in leva la gamba afferrata.' },
-        { n:'B', name:'Rotazione in senso opposto', video:'marrone_7_2.mp4', desc:'Come A ma ruota in senso contrario, portandolo a terra e facendo leva sopra il ginocchio con avambraccio.' }
+        { n:'A', name:'Rotazione in direzione del calcio', video:'marrone_7_1.mp4', desc:'Mani a protezione del volto blocco gamba che mi sta calciando e continuo la rotazione nella stessa direzione del calcio, porto in leva la gamba che ho afferrato.' },
+        { n:'B', name:'Rotazione in senso opposto al calcio', video:'marrone_7_2.mp4', desc:'Come A ma ruoto in senso contrario, portandolo a terra e facendo leva sopra il ginocchio con avabraccio.' }
       ]},
       { title:'Contrattacco da difesa da calci a terra', items:[
-        { n:'A', name:'Rotazione in direzione del calcio', video:'marrone_8_1.mp4', desc:'Mani a protezione del volto, blocca la gamba che ti sta calciando e continua la rotazione nella stessa direzione del calcio, porta in leva la gamba che hai afferrato.' },
-        { n:'B', name:'Rotazione in senso opposto al calcio', video:'marrone_8_2.mp4', desc:'Come A ma ruota in senso contrario, portandolo a terra e facendo leva sopra il ginocchio con avambraccio.' }
+        { n:'1', name:'Posizione quadrupedale', video:'marrone_8_1.mp4', desc:'(Quadrupedia) Braccio controlaterale afferra spalla passando sotto ascella; eseguo rotazione tenendo bloccato braccio più lontano con le gambe e metto in leva l\'aggressore.' }
       ]},
       { title:'Esame', items:[
-        { n:'', name:'Combattimento a contatto pieno', video:'', desc:'3 round da 3 minuti - 1 minuto di recupero.' },
-        { n:'', name:'Programma esame', video:'', desc:'Tutte le sezioni del programma cintura marrone: difese da pistola (14 tecniche), difese da prese al corpo con proiezione avanzate, tecniche operative, difese da prese al corpo da dietro avanzate, difesa da leva al braccio da dietro, capriola in avanti, difese con mani ammanettate, difese da calci a terra, contrattacco da difesa da calci a terra.' }
+        { n:'9', name:'Combattimento a contatto pieno — 3 round da 3 minuti — 1 minuto di recupero', video:'', desc:'3 round da 3 minuti a contatto pieno con 1 minuto di recupero tra i round.' }
       ]}
     ],
     tips:['OBIETTIVO PRINCIPALE: uscire dalla linea di tiro e tenere il controllo dell\'arma','Quando miri punta sempre alle gambe, mai al viso o al torso']
@@ -664,13 +670,13 @@ function renderSections(belt) {
     html += `<div class="tip-block"><div class="tip-label">⚡ Principi chiave</div>${belt.tips.map(t=>`<div class="tip-text">• ${t}</div>`).join('')}</div>`;
   }
   belt.sections.forEach((sec,si)=>{
-    const vidCount = sec.items.filter(i=>videoReady(i.video)).length;
+    const vidCount = 0;
     html += `
       <div class="section-item" id="sec-${si}">
         <div class="section-header" onclick="toggleSection(${si})">
           <div class="section-num">${String(si+1).padStart(2,'0')}</div>
           <div class="section-title">${sec.title}</div>
-          ${vidCount>0 ? `<div style="font-size:11px;color:var(--accent);margin-right:4px">▶ ${vidCount}</div>` : ''}
+          
           <div class="section-chevron">›</div>
         </div>
         <div class="section-body">
@@ -680,7 +686,7 @@ function renderSections(belt) {
                 ${item.n ? `<div class="tech-name">${item.n}. ${item.name}</div>` : `<div class="tech-name">${item.name}</div>`}
                 <div class="tech-desc">${item.desc.length>110 ? item.desc.substring(0,110)+'…' : item.desc}</div>
               </div>
-              ${videoReady(item.video) ? '<div class="video-badge">▶ VIDEO</div>' : ''}
+              
             </div>
           `).join('')}
         </div>
@@ -747,7 +753,7 @@ function openTech(beltId, si, ii) {
               <div style="font-size:14px;font-weight:600">${t.n ? t.n+'. ' : ''}${t.name}</div>
               <div style="font-size:12px;color:var(--text2);margin-top:2px">${t.desc.substring(0,70)}…</div>
             </div>
-            ${videoReady(t.video) ? '<div class="video-badge">▶</div>' : ''}
+            
           </div>
         `).join('')}
       ` : ''}
@@ -828,7 +834,7 @@ function onSearch(query) {
       <div class="sr-section">${r.sec.title}</div>
       <div class="sr-tech">${r.item.n ? r.item.n+'. ' : ''}${r.item.name}</div>
       <div class="sr-snippet">${highlight(r.item.desc,q)}</div>
-      ${videoReady(r.item.video) ? '<div class="sr-has-video">▶ Video disponibile</div>' : ''}
+      
     </div>`;
   });
   html+='</div>';
