@@ -121,6 +121,14 @@
   .auth-avatar { width:32px; height:32px; border-radius:50%; background:var(--bg3); border:2px solid var(--border); overflow:hidden; }
   .auth-avatar img { width:100%; height:100%; object-fit:cover; }
   .auth-logout { background:none; border:none; color:var(--text2); font-size:12px; cursor:pointer; padding:4px 8px; }
+
+  /* WAITING APPROVAL SCREEN */
+  #auth-waiting { position:fixed; inset:0; background:var(--bg); z-index:9999; display:none; flex-direction:column; align-items:center; justify-content:center; padding:32px; text-align:center; }
+  #auth-waiting.visible { display:flex; }
+  .waiting-icon { font-size:48px; margin-bottom:16px; }
+  .waiting-title { font-size:20px; font-weight:700; margin-bottom:8px; }
+  .waiting-sub { font-size:14px; color:var(--text2); line-height:1.6; margin-bottom:32px; }
+  .waiting-logout-btn { background:var(--bg3); color:var(--text2); border:1px solid var(--border); border-radius:10px; padding:12px 24px; font-size:14px; cursor:pointer; }
 </style>
 </head>
 <body>
@@ -134,6 +142,13 @@
 <div id="auth-user" class="auth-user hidden">
   <div class="auth-avatar"><img id="auth-avatar-img" src="" alt=""></div>
   <button class="auth-logout" onclick="handleLogout()">Esci</button>
+</div>
+
+<div id="auth-waiting">
+  <div class="waiting-icon">⏳</div>
+  <div class="waiting-title">Account in attesa di approvazione</div>
+  <div class="waiting-sub">La tua registrazione è stata ricevuta.<br>Riceverai accesso non appena il tuo account sarà approvato.</div>
+  <button class="waiting-logout-btn" onclick="handleLogout()">Esci</button>
 </div>
 <div id="app">
   <div id="header">
@@ -915,7 +930,16 @@ async function initAuth0() {
 
   // Handle redirect callback after login
   if (window.location.search.includes('code=') || window.location.search.includes('error=')) {
-    await auth0Client.handleRedirectCallback();
+    try {
+      await auth0Client.handleRedirectCallback();
+    } catch(e) {
+      // Access denied = account not approved yet
+      if (e.message && (e.message.includes('approvazione') || e.message.includes('access_denied'))) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+        document.getElementById('auth-waiting').classList.add('visible');
+        return;
+      }
+    }
     window.history.replaceState({}, document.title, window.location.pathname);
   }
 
@@ -952,6 +976,8 @@ async function handleLogout() {
 
 async function init() {
   await initAuth0();
+  // If waiting screen is shown, don't proceed
+  if (document.getElementById('auth-waiting').classList.contains('visible')) return;
   const isAuthenticated = await auth0Client.isAuthenticated();
   if (isAuthenticated) {
     await loadVideoManifest();
