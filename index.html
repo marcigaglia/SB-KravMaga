@@ -863,7 +863,7 @@ function videoReady(filename) {
 
 async function loadVideoManifest() {
   try {
-    const res = await fetch('./video/index.json');
+    const res = await fetch('./video/index.json?t=' + Date.now(), { cache: 'no-store' });
     if (res.ok) {
       const list = await res.json();
       availableVideos = new Set(list);
